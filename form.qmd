@@ -1,0 +1,56 @@
+```{=html}
+<style>
+  .newsletter-box {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fefefe;
+    padding: 2rem;
+    max-width: 700px;
+    margin: 2rem auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+  }
+
+  .newsletter-box h2 {
+    margin-top: 0;
+  }
+
+  .newsletter-box form {
+    display: flex;
+    gap: 0.5rem;
+    margin: 1.5rem 0;
+  }
+
+  .newsletter-box input[type="email"] {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .newsletter-box button {
+    padding: 0.5rem 1rem;
+    border: 1px solid #666;
+    background: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .newsletter-box p {
+    margin-bottom: 0;
+  }
+</style>
+
+<div class="newsletter-box">
+  <h2>Join our mailing list</h2>
+  <p>We’re currently developing the tool and would love to keep you updated as the project moves forward. If you’re interested in how prediction models work, why data size matters, or how this tool could support better, fairer research, sign up for occasional updates using the form below.</p>
+
+  <form action="https://assets.mailerlite.com/jsonp/1616562/forms/158072248783078494/subscribe" method="post" target="_blank">
+    <input type="email" name="fields[email]" placeholder="Email" aria-label="Email" required>
+    <button type="submit">Subscribe</button>
+    <input type="hidden" name="ml-submit" value="1">
+    <input type="hidden" name="anticsrf" value="true">
+  </form>
+
+  <p>You’ll receive no more than four emails per year, and you can unsubscribe at any time with a single click.</p>
+</div>
+```

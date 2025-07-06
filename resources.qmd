@@ -1,0 +1,84 @@
+---
+title: Learning resources
+---
+
+```{=html}
+<div>
+  <div class="row">
+    <div class="col-md-6"></div>
+<div class="card resource-card">
+<h3>What is prediction modelling?</h3>
+<p>An overview of how statistical models are used to make predictions in health research.</p>
+</div>
+<div class="card resource-card">
+<h3>What is prediction modelling?</h3>
+<p>An overview of how statistical models are used to make predictions in health research.</p>
+</div>
+
+<h3>What is prediction modelling?</h3>
+
+An overview of how statistical models are used to make predictions in health research.
+
+    <div class="col-md-6"></div>
+  </div>
+  <div class="row">
+    <div class="col-md-6"></div>
+    <div class="col-md-6"></div>
+  </div>
+</div>
+```
+
+:::: {.grid layout-ncol=2}
+
+:::: {.card .resource-card}
+### [What is prediction modelling?](what-is-prediction.qmd)
+
+An overview of how statistical models are used to make predictions in health research.
+::::
+
+:::: {.card .resource-card}
+### [Why is sample size important?](why-sample-size.qmd)
+
+Learn how sample size affects reliability, precision, and generalisability.
+::::
+
+:::: {.card .resource-card}
+### [How does our software work?](how-it-works.qmd)
+
+A walkthrough of the tools we’ve built and how they support research workflows.
+::::
+
+:::: {.card .resource-card}
+### [Frequently asked questions](faq.qmd)
+
+Quick answers to common queries about our approach, methods, and tools.
+::::
+
+::::
+:::: {.grid layout-ncol=2}
+
+:::: {.card .resource-card}
+### [What is prediction modelling?](what-is-prediction.qmd)
+
+Start here with the basics of R and essential syntax.
+::::
+
+:::: {.card .resource-card}
+### [Why is sample size important?](why-sample-size.qmd)
+
+Create effective plots using ggplot2 and other tools.
+::::
+
+:::: {.card .resource-card}
+### [How does our software work?](how-it-works.qmd)
+
+Tidy, reshape, and clean data with the tidyverse.
+::::
+
+:::: {.card .resource-card}
+### [Modelling](modelling.qmd)
+
+Understand regression, classification, and tidymodels.
+::::
+
+::::

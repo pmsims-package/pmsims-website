@@ -1,0 +1,14 @@
+color:
+  palette:
+    blue: "#073e66"
+    orange: "#f65f33"
+  foreground: blue
+  primary: blue
+  secondary: orange
+
+typography:
+  fonts:
+    - family: Lato
+      source: google
+  base: Lato
+  headings: Lato

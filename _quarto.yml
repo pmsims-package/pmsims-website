@@ -1,0 +1,29 @@
+project:
+  type: website
+
+website:
+  title: "pmsims"
+  navbar:
+    background: primary
+    left:
+      - href: index.qmd
+        text: Home
+      - href: about.qmd
+        text: About
+      - href: team.qmd
+        text: Team
+      - href: resources.qmd
+        text: Learn more
+
+format:
+  html:
+    theme:
+      - cosmo
+      - brand
+    css: styles.css
+    toc: true
+    markdown:
+      extensions: [fenced-divs]
+
+
+

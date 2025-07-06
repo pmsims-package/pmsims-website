@@ -1,0 +1,106 @@
+---
+title: "About Us"
+format: html
+page-layout: full
+---
+
+
+## Our Team
+
+```{=html}
+<div class="card mb-4 p-3 d-flex flex-row align-items-center justify-content-between" style="max-width: 700px;">
+  <div>
+    <h4 class="mb-1">Dr Ewan Carr</h4>
+    <p class="mb-0">Principal Investigator</p>
+    <p><em>King's College London</em></p>
+  </div>
+  <div>
+    <img src="images/ewan.png" style="max-width: 100px; height: auto;" alt="Dr Ewan Carr">
+  </div>
+</div>
+
+<div class="card mb-4 p-3 d-flex flex-row align-items-center justify-content-between" style="max-width: 700px;">
+  <div>
+    <h4 class="mb-1">Dr Gordon Forbes</h4>
+    <p class="mb-0">Principal Investigator</p>
+    <p><em>King’s College London</em></p>
+  </div>
+  <div>
+    <img src="images/gordon.png" style="max-width: 100px; height: auto;" alt="Dr Gordon Forbes">
+  </div>
+</div>
+
+<div class="card mb-4 p-3 d-flex flex-row align-items-center justify-content-between" style="max-width: 700px;">
+  <div>
+    <h4 class="mb-1">Dr Diana Shamsutdinova</h4>
+    <p class="mb-0">Co-applicant</p>
+    <p><em>King’s College London</em></p>
+  </div>
+  <div>
+    <img src="images/diana.png" style="max-width: 100px; height: auto;" alt="Dr Diana Shamsutdinova">
+  </div>
+</div>
+
+<div class="card mb-4 p-3 d-flex flex-row align-items-center justify-content-between" style="max-width: 700px;">
+  <div>
+    <h5 class="mb-1">Prof Daniel Stahl</h5>
+    <p class="mb-0">Co-applicant</p>
+    <p><em>King’s College London</em></p>
+  </div>
+  <div>
+    <img src="images/daniel.png" style="max-width: 100px; height: auto;" alt="Prof Daniel Stahl">
+  </div>
+</div>
+
+<div class="card mb-4 p-3 d-flex flex-row align-items-center justify-content-between" style="max-width: 700px;">
+  <div>
+    <h4 class="mb-1"><a href="https://flxzimmer.github.io//">Dr Felix Zimmer</a></h4>
+    <p class="mb-0">Co-applicant</p>
+    <p><em>Independent Researcher</em></p>
+  </div>
+  <div>
+    <img src="images/mark.png" style="max-width: 100px; height: auto;" alt="Dr Felix Zimmer">
+  </div>
+</div>
+
+```
+
+## Our Advisory Group
+
+```{=html}
+<div class="card mb-3 p-3" style="max-width: 700px;">
+  <h6 class="mb-1">Prof Alice White</h6>
+  <p class="mb-0">Clinical Advisor — <em>NHS England</em></p>
+</div>
+
+<div class="card mb-3 p-3" style="max-width: 700px;">
+  <h6 class="mb-1">Dr Mark Evans</h6>
+  <p class="mb-0">Industry Representative — <em>AstraZeneca</em></p>
+</div>
+
+<div class="card mb-3 p-3" style="max-width: 700px;">
+  <h6 class="mb-1">Prof Linda Zhao</h6>
+  <p class="mb-0">Biostatistician — <em>University of Cambridge</em></p>
+</div>
+
+<div class="card mb-3 p-3" style="max-width: 700px;">
+  <h6 class="mb-1">Dr Tom Williams</h6>
+  <p class="mb-0">Policy Advisor — <em>Wellcome Trust</em></p>
+</div>
+
+<div class="card mb-3 p-3" style="max-width: 700px;">
+  <h6 class="mb-1">Prof Sarah Khan</h6>
+  <p class="mb-0">Digital Health Specialist — <em>Imperial College London</em></p>
+</div>
+```
+
+
+## Partners
+
+```{=html}
+<div class="d-flex flex-wrap justify-content-center align-items-center gap-4 my-4">
+  <img src="images/kcl-logo.png" alt="King's College London" height="60">
+  <img src="images/oxford-logo.png" alt="Oxford" height="60">
+  <img src="images/nhs-logo.png" alt="NHS" height="60">
+</div>
+```

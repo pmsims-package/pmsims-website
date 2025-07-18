@@ -39,14 +39,14 @@ underrepresented groups. Our project addresses this problem by providing
 practical guidance on the data needed to develop models that are both
 powerful and fair.
 
-# Who is involved?
-
 This project is led by a team at [King's College London]() and funded by the
 [National Institute for Health and Care Research]() as part of the Research
 for Patient Benefit Programme. [Click here](about.qmd) to learn more
 about the team.
 
-![](images/nihr.png)
-
+<div style="display: flex; gap: 1rem; align-items: center; padding-top: 1rem;">
+  <img src="images/nihr.png" alt="NIHR logo" style="height: 100px; border-right: 1px solid #ccc; padding-right: 1.5rem;">
+  <img src="images/kcl.png" alt="King's College London logo" style="height: 100px; padding-left: 1.5rem;">
+</div>
 
 {{< include form.qmd >}}

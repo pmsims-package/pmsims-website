@@ -43,7 +43,7 @@ page-layout: full
 
 <div class="card mb-4 p-3 d-flex flex-row align-items-center justify-content-between" style="max-width: 700px;">
   <div>
-    <h5 class="mb-1">Prof Daniel Stahl</h5>
+    <h5 class="mb-1"><a href="https://www.kcl.ac.uk/people/daniel-stahl">Prof Daniel Stahl</a></h5>
     <p class="mb-0">Co-applicant</p>
     <p><em>King’s College London</em></p>
   </div>
@@ -59,7 +59,7 @@ page-layout: full
     <p><em>Independent Researcher</em></p>
   </div>
   <div>
-    <img src="images/mark.png" style="max-width: 100px; height: auto;" alt="Dr Felix Zimmer">
+    <img src="images/felix.png" style="max-width: 100px; height: auto;" alt="Dr Felix Zimmer">
   </div>
 </div>
 
@@ -99,8 +99,7 @@ page-layout: full
 
 ```{=html}
 <div class="d-flex flex-wrap justify-content-center align-items-center gap-4 my-4">
-  <img src="images/kcl-logo.png" alt="King's College London" height="60">
-  <img src="images/oxford-logo.png" alt="Oxford" height="60">
-  <img src="images/nhs-logo.png" alt="NHS" height="60">
+  <img src="images/kcl.png" alt="King's College London" height="60">
+  <img src="images/nihr.png" alt="NIHR" height="60">
 </div>
 ```

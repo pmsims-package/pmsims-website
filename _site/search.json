@@ -46,7 +46,7 @@
     "href": "index.html",
     "title": "pmsims",
     "section": "",
-    "text": "pmsims\n      Tools to estimate minimum sample sizes for prediction and machine learning models\n    \n  \n\nWe’re creating a free, easy-to-use tool to help researchers calculate how much data they need to build accurate and reliable prediction models using machine learning and long-term health records. Developed in partnership with patients, carers, and charities, the tool will support safer, fairer, and more effective use of data in healthcare.\nPrediction models are already helping the NHS personalise care, plan treatments, and prevent illness before it starts. But many are built on too little data, leading to inaccurate results—especially for underrepresented groups. Our project addresses this problem by providing practical guidance on the data needed to develop models that are both powerful and fair.\nThis project is led by a team at King’s College London and funded by the National Institute for Health and Care Research as part of the Research for Patient Benefit Programme. Click here to learn more about the team.\n\n \n\n\n\n\n  Join our mailing list\n  We’re currently developing the tool and would love to keep you updated as the project moves forward. If you’re interested in how prediction models work, why data size matters, or how this tool could support better, fairer research, sign up for occasional updates using the form below.\n\n  \n    \n    Subscribe\n    \n    \n  \n\n  You’ll receive no more than four emails per year, and you can unsubscribe at any time with a single click."
+    "text": "pmsims\n\n  \n    pmsims\n  \n    Tools to estimate minimum sample sizes for prediction and machine learning models\n  \n\n\n    pmsims\n\n  \n    \n    Tools to estimate minimum sample sizes for prediction and machine learning models\n  \n  \n\nWe’re creating a free, easy-to-use tool to help researchers calculate how much data they need to build accurate and reliable prediction models using machine learning and long-term health records. Developed in partnership with patients, carers, and charities, the tool will support safer, fairer, and more effective use of data in healthcare.\nPrediction models are already helping the NHS personalise care, plan treatments, and prevent illness before it starts. But many are built on too little data, leading to inaccurate results—especially for underrepresented groups. Our project addresses this problem by providing practical guidance on the data needed to develop models that are both powerful and fair.\nThis project is led by a team at King’s College London and funded by the National Institute for Health and Care Research as part of the Research for Patient Benefit Programme. Click here to learn more about the team.\n\n \n\n\n\n\n  Join our mailing list\n  We’re currently developing the tool and would love to keep you updated as the project moves forward. If you’re interested in how prediction models work, why data size matters, or how this tool could support better, fairer research, sign up for occasional updates using the form below.\n\n  \n    \n    Subscribe\n    \n    \n  \n\n  You’ll receive no more than four emails per year, and you can unsubscribe at any time with a single click."
   },
   {
     "objectID": "why-sample-size.html",
@@ -79,28 +79,21 @@
   {
     "objectID": "team.html",
     "href": "team.html",
-    "title": "About Us",
+    "title": "Our Team",
     "section": "",
-    "text": "Principal Investigator\n    King's College London\n  \n  \n    \n  \n\n\n\n  \n    \n    Principal Investigator\n    King’s College London\n  \n  \n    \n  \n\n\n\n  \n    \n    Co-applicant\n    King’s College London\n  \n  \n    \n  \n\n\n\n  \n    \n    Co-applicant\n    King’s College London\n  \n  \n    \n  \n\n\n\n  \n    \n    Co-applicant\n    Independent Researcher"
-  },
-  {
-    "objectID": "team.html#our-team",
-    "href": "team.html#our-team",
-    "title": "About Us",
-    "section": "",
-    "text": "Principal Investigator\n    King's College London\n  \n  \n    \n  \n\n\n\n  \n    \n    Principal Investigator\n    King’s College London\n  \n  \n    \n  \n\n\n\n  \n    \n    Co-applicant\n    King’s College London\n  \n  \n    \n  \n\n\n\n  \n    \n    Co-applicant\n    King’s College London\n  \n  \n    \n  \n\n\n\n  \n    \n    Co-applicant\n    Independent Researcher"
+    "text": "Principal Investigator\n    King's College London"
   },
   {
     "objectID": "team.html#our-advisory-group",
     "href": "team.html#our-advisory-group",
-    "title": "About Us",
+    "title": "Our Team",
     "section": "Our Advisory Group",
-    "text": "Our Advisory Group\n\n  Prof Alice White\n  Clinical Advisor — NHS England\n\n\n\n  Dr Mark Evans\n  Industry Representative — AstraZeneca\n\n\n\n  Prof Linda Zhao\n  Biostatistician — University of Cambridge\n\n\n\n  Dr Tom Williams\n  Policy Advisor — Wellcome Trust\n\n\n\n  Prof Sarah Khan\n  Digital Health Specialist — Imperial College London"
+    "text": "Our Advisory Group\n\n  \n    \n      Dr Joie Ensor\n    \n    \n      \n        Department of Applied Health Sciences, School of Health Sciences,\n        College of Medicine and Health, University of Birmingham, Birmingham,\n        UK. \n      \n        NIHR Birmingham Biomedical Research Centre, UK.\n      \n    \n  \n\n\n\n\n  \n    \n      Katherine Barrett\n    \n  \n\n\n\n\n  \n    \n      Joie Ensor\n    \n    \n      \n        Department of Applied Health Sciences, School of Health Sciences, College of Medicine and Health, University of Birmingham, Birmingham, UK.\n      \n      \n        NIHR Birmingham Biomedical Research Centre, UK.\n      \n    \n  \n\n\n\n\n  \n    \n      Emma Shellard\n    \n    \n      \n        Industry Representative — AstraZeneca\n      \n    \n  \n\n\n\n\n\n  \n    \n      Katherine Barrett\n    \n    \n      \n    \n  \n\n\n\n  \n    \n      Joie Ensor\n    \n    \n      Department of Applied Health Sciences, School of Health Sciences, College of Medicine and Health, University of Birmingham, Birmingham, UK.\n      NIHR Birmingham Biomedical Research Centre, UK.\n    \n  \n\n\n\n  \n    \n      Emma Shellard\n    \n    \n      Industry Representative — AstraZeneca\n    \n  \n\n\n  \n    \n      Katherine Barrett\n    \n    \n      \n    \n  \n\n\n\n  \n    \n      Joie Ensor\n    \n    \n      Department of Applied Health Sciences, School of Health Sciences, College of Medicine and Health, University of Birmingham, Birmingham, UK.\n      NIHR Birmingham Biomedical Research Centre, UK.\n    \n  \n\n\n\n  \n    \n      Emma Shellard\n    \n    \n      Industry Representative — AstraZeneca\n    \n  \n\n\n  Katherine Barrett\n\n\n\n  Joie Ensor\n  Department of Applied Health Sciences, School of Health Sciences, College of Medicine and Health, University of Birmingham, Birmingham, UK.\n  National Institute for Health and Care Research (NIHR) Birmingham Biomedical Research Centre, UK.\n\n\n\n  Emma Shellard\n  Industry Representative — AstraZeneca\n\n\n\n  Aurora Todisco\n  Biostatistician — University of Cambridge\n\n\n\n  Dr Tom Williams\n  Policy Advisor — Wellcome Trust\n\n\n\n  Prof Sarah Khan\n  Digital Health Specialist — Imperial College London\n\nKatherine Barrett Emma Shellard Aurora Todisco"
   },
   {
     "objectID": "team.html#partners",
     "href": "team.html#partners",
-    "title": "About Us",
+    "title": "Our Team",
     "section": "Partners",
     "text": "Partners"
   },

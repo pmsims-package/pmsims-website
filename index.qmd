@@ -1,28 +1,27 @@
 ---
 toc: false
+format:
+  html:
+    css: index.css
 ---
 
 ```{=html}
-<div style="padding-bottom: 1rem;">
-  <div style="position: relative; font-family: Lato, sans-serif;">
-    <img src="images/banner.png" alt="Banner" style="width: 100%; height: auto; border-radius: 0.5rem;" />
-
-    <div style="
-      position: absolute;
-      top: 50%;
-      left: 10%;
-      right: 10%;
-      transform: translateY(-50%);
-      background: rgba(0, 0, 0, 0.5);
-      padding: 1rem 2rem;
-      border-radius: 0.75rem;
-      color: white;
-      text-align: center;
-    ">
-      <div style="font-size: 4rem; font-weight: bold;">pmsims</div>
-      <div style="font-size: 1.5rem;">Tools to estimate minimum sample sizes for prediction and machine learning models</div>
-    </div>
+    <h1>pmsims</h1>
+<div class="banner-container">
+  <img src="images/banner.png" alt="Banner" class="banner-img" />
+    <h1>pmsims</h1>
+  <div class="banner-text">
+    <p>Tools to estimate minimum sample sizes for prediction and machine learning models</p>
   </div>
+</div>
+
+    <h1>pmsims</h1>
+<div class="banner-container">
+  <div class="banner-text">
+    <h1>pmsims</h1>
+    <p>Tools to estimate minimum sample sizes for prediction and machine learning models</p>
+  </div>
+  <img src="images/banner.png" alt="Banner" class="banner-img" />
 </div>
 ```
 

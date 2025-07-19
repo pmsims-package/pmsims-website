@@ -1,0 +1,67 @@
+/* index.css */
+.banner-container {
+  position: relative;
+  font-family: Lato, sans-serif;
+  margin-bottom: 1.5rem;
+}
+
+.banner-img {
+  width: 100%;
+  height: 50%;
+  display: block;
+  border-radius: 0.75rem;
+}
+
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.5);
+  padding: 2rem 2rem;
+  border-radius: 0.75rem;
+  color: white;
+  text-align: center;
+  width: 90%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.banner-text h1 {
+  font-size: 2.5vw;
+}
+
+.banner-text p {
+  font-size: 3vw;
+  margin: 0.5rem 0 0;
+}
+
+@media (max-width: 768px) {
+  .banner-text h1 {
+  }
+  .banner-text p {
+    font-size: 4vw;
+    background: rgba(0, 0, 0, 0);
+    padding: 0rem 0rem;
+  }
+  .banner-img {
+      display: block;
+      height: auto;
+      margin: 0px;
+      padding: 0px;
+  }
+}
+
+@media (max-width: 950px) {
+  .banner-text p {
+    font-size: 4vw;
+}
+}
+
+@media (min-width: 1400px) {
+  .banner-text h1 {
+  }
+  .banner-text p {
+    font-size: 3vw;
+  }
+}

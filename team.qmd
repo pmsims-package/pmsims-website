@@ -1,16 +1,14 @@
 ---
-title: "About Us"
+title: "Our Team"
 format: html
 page-layout: full
 ---
 
 
-## Our Team
-
 ```{=html}
-<div class="card mb-4 p-3 d-flex flex-row align-items-center justify-content-between" style="max-width: 700px;">
+<div class="card mb-4 p-3 d-flex flex-row align-items-center justify-content-between" style="max-width: 1000px;">
   <div>
-    <h4 class="mb-1">Dr Ewan Carr</h4>
+    <h4 class="mb-1"><a href="https://www.kcl.ac.uk/people/ewan-carr">Dr Ewan Carr</a></h4>
     <p class="mb-0">Principal Investigator</p>
     <p><em>King's College London</em></p>
   </div>
@@ -19,9 +17,9 @@ page-layout: full
   </div>
 </div>
 
-<div class="card mb-4 p-3 d-flex flex-row align-items-center justify-content-between" style="max-width: 700px;">
+<div class="card mb-4 p-3 d-flex flex-row align-items-center justify-content-between" style="max-width: 1000px;">
   <div>
-    <h4 class="mb-1">Dr Gordon Forbes</h4>
+    <h4 class="mb-1"><a href="https://www.kcl.ac.uk/people/mr-gordon-forbes">Dr Gordon Forbes</a></h4>
     <p class="mb-0">Principal Investigator</p>
     <p><em>King’s College London</em></p>
   </div>
@@ -30,9 +28,20 @@ page-layout: full
   </div>
 </div>
 
-<div class="card mb-4 p-3 d-flex flex-row align-items-center justify-content-between" style="max-width: 700px;">
+<div class="card mb-4 p-3 d-flex flex-row align-items-center justify-content-between" style="max-width: 1000px;">
   <div>
-    <h4 class="mb-1">Dr Diana Shamsutdinova</h4>
+    <h4 class="mb-1"><a href="https://www.bmj.com/about-bmj/advisory-panels/patient-panel-members/sarah-markham">Dr Sarah Markham</a></h4>
+    <p class="mb-0">Co-applicant</p>
+    <p><em>King's College London</em></p>
+  </div>
+  <div>
+    <img src="images/sarah.png" style="max-width: 100px; height: auto;" alt="Dr Sarah Markham">
+  </div>
+</div>
+
+<div class="card mb-4 p-3 d-flex flex-row align-items-center justify-content-between" style="max-width: 1000px;">
+  <div>
+    <h4 class="mb-1"><a href="https://www.kcl.ac.uk/people/diana-shamsutdinova">Dr Diana Shamsutdinova</a></h4>
     <p class="mb-0">Co-applicant</p>
     <p><em>King’s College London</em></p>
   </div>
@@ -41,9 +50,9 @@ page-layout: full
   </div>
 </div>
 
-<div class="card mb-4 p-3 d-flex flex-row align-items-center justify-content-between" style="max-width: 700px;">
+<div class="card mb-4 p-3 d-flex flex-row align-items-center justify-content-between" style="max-width: 1000px;">
   <div>
-    <h5 class="mb-1"><a href="https://www.kcl.ac.uk/people/daniel-stahl">Prof Daniel Stahl</a></h5>
+    <h4 class="mb-1"><a href="https://www.kcl.ac.uk/people/daniel-stahl">Prof Daniel Stahl</a></h4>
     <p class="mb-0">Co-applicant</p>
     <p><em>King’s College London</em></p>
   </div>
@@ -52,7 +61,7 @@ page-layout: full
   </div>
 </div>
 
-<div class="card mb-4 p-3 d-flex flex-row align-items-center justify-content-between" style="max-width: 700px;">
+<div class="card mb-4 p-3 d-flex flex-row align-items-center justify-content-between" style="max-width: 1000px;">
   <div>
     <h4 class="mb-1"><a href="https://flxzimmer.github.io//">Dr Felix Zimmer</a></h4>
     <p class="mb-0">Co-applicant</p>
@@ -67,32 +76,167 @@ page-layout: full
 
 ## Our Advisory Group
 
+
 ```{=html}
-<div class="card mb-3 p-3" style="max-width: 700px;">
-  <h6 class="mb-1">Prof Alice White</h6>
-  <p class="mb-0">Clinical Advisor — <em>NHS England</em></p>
+<div class="card mb-3" style="max-width: 1000px;">
+  <div class="d-flex flex-column flex-md-row align-items-md-center p-3" style="min-height: 100px;">
+    <div class="text-center text-md-start" style="flex: 0 0 30%;">
+      <h4 class="mb-0">Dr Joie Ensor</h4>
+    </div>
+    <div class="mt-3 mt-md-0 ps-md-3" style="flex: 1;">
+      <p class="mb-2">
+        Department of Applied Health Sciences, School of Health Sciences,
+        College of Medicine and Health, University of Birmingham, Birmingham,
+        UK. </p>
+      <p class="mb-0">
+        NIHR Birmingham Biomedical Research Centre, UK.
+      </p>
+    </div>
+  </div>
 </div>
 
-<div class="card mb-3 p-3" style="max-width: 700px;">
-  <h6 class="mb-1">Dr Mark Evans</h6>
+<!-- Card: Name only -->
+<div class="card mb-3" style="max-width: 700px;">
+  <div class="d-flex flex-column flex-md-row align-items-md-center p-3" style="min-height: 100px;">
+    <div class="w-100 text-center text-md-start">
+      <h4 class="mb-0">Katherine Barrett</h4>
+    </div>
+  </div>
+</div>
+
+<!-- Card: Name + affiliations -->
+<div class="card mb-3" style="max-width: 700px;">
+  <div class="d-flex flex-column flex-md-row align-items-md-center p-3" style="min-height: 100px;">
+    <div class="text-center text-md-start" style="flex: 0 0 30%;">
+      <h4 class="mb-0">Joie Ensor</h4>
+    </div>
+    <div class="mt-3 mt-md-0 ps-md-3" style="flex: 1;">
+      <p class="mb-2 small text-muted" style="line-height: 1.5;">
+        Department of Applied Health Sciences, School of Health Sciences, College of Medicine and Health, University of Birmingham, Birmingham, UK.
+      </p>
+      <p class="mb-0 small text-muted" style="line-height: 1.5;">
+        NIHR Birmingham Biomedical Research Centre, UK.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Card: Name + single affiliation -->
+<div class="card mb-3" style="max-width: 700px;">
+  <div class="d-flex flex-column flex-md-row align-items-md-center p-3" style="min-height: 100px;">
+    <div class="text-center text-md-start" style="flex: 0 0 30%;">
+      <h4 class="mb-0">Emma Shellard</h4>
+    </div>
+    <div class="mt-3 mt-md-0 ps-md-3" style="flex: 1;">
+      <p class="mb-0 small text-muted" style="line-height: 1.5;">
+        Industry Representative — <em>AstraZeneca</em>
+      </p>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="card mb-3" style="max-width: 700px;">
+  <div class="d-flex flex-column flex-md-row align-items-md-center p-3 gap-3">
+    <div style="flex: 0 0 30%;">
+      <h4 class="mb-0">Katherine Barrett</h4>
+    </div>
+    <div style="flex: 1 1 70%;">
+      <!-- No affiliation -->
+    </div>
+  </div>
+</div>
+
+<div class="card mb-3" style="max-width: 700px;">
+  <div class="d-flex flex-column flex-md-row align-items-md-center p-3 gap-3">
+    <div style="flex: 0 0 30%;">
+      <h4 class="mb-0">Joie Ensor</h4>
+    </div>
+    <div style="flex: 1 1 70%;">
+      <p class="mb-1">Department of Applied Health Sciences, School of Health Sciences, College of Medicine and Health, University of Birmingham, Birmingham, UK.</p>
+      <p class="mb-0">NIHR Birmingham Biomedical Research Centre, UK.</p>
+    </div>
+  </div>
+</div>
+
+<div class="card mb-3" style="max-width: 700px;">
+  <div class="d-flex flex-column flex-md-row align-items-md-center p-3 gap-3">
+    <div style="flex: 0 0 30%;">
+      <h4 class="mb-0">Emma Shellard</h4>
+    </div>
+    <div style="flex: 1 1 70%;">
+      <p class="mb-0">Industry Representative — <em>AstraZeneca</em></p>
+    </div>
+  </div>
+</div>
+<div class="card mb-3 p-3" style="max-width: 1000px;">
+  <div class="row g-3 align-items-start">
+    <div class="col-12 col-md-4">
+      <h4 class="mb-0">Katherine Barrett</h4>
+    </div>
+    <div class="col-12 col-md-8">
+      <!-- No affiliation -->
+    </div>
+  </div>
+</div>
+
+<div class="card mb-3 p-3" style="max-width: 1000px;">
+  <div class="row g-3 align-items-start">
+    <div class="col-12 col-md-4">
+      <h4 class="mb-0">Joie Ensor</h4>
+    </div>
+    <div class="col-12 col-md-8">
+      <p class="mb-1">Department of Applied Health Sciences, School of Health Sciences, College of Medicine and Health, University of Birmingham, Birmingham, UK.</p>
+      <p class="mb-0">NIHR Birmingham Biomedical Research Centre, UK.</p>
+    </div>
+  </div>
+</div>
+
+<div class="card mb-3 p-3" style="max-width: 1000px;">
+  <div class="row g-3 align-items-start">
+    <div class="col-12 col-md-4">
+      <h4 class="mb-0">Emma Shellard</h4>
+    </div>
+    <div class="col-12 col-md-8">
+      <p class="mb-0">Industry Representative — <em>AstraZeneca</em></p>
+    </div>
+  </div>
+</div>
+<div class="card mb-3 p-3" style="max-width: 1000px;">
+  <h4 class="mb-1">Katherine Barrett</h4>
+</div>
+
+<div class="card mb-3 p-3" style="max-width: 1000px;">
+  <h4 class="mb-1">Joie Ensor</h4>
+  <p class="mb-0">Department of Applied Health Sciences, School of Health Sciences, College of Medicine and Health, University of Birmingham, Birmingham, UK.</p>
+  <p class="mb-0">National Institute for Health and Care Research (NIHR) Birmingham Biomedical Research Centre, UK.</p>
+</div>
+
+<div class="card mb-3 p-3" style="max-width: 1000px;">
+  <h6 class="mb-1">Emma Shellard</h6>
   <p class="mb-0">Industry Representative — <em>AstraZeneca</em></p>
 </div>
 
-<div class="card mb-3 p-3" style="max-width: 700px;">
-  <h6 class="mb-1">Prof Linda Zhao</h6>
+<div class="card mb-3 p-3" style="max-width: 1000px;">
+  <h6 class="mb-1">Aurora Todisco</h6>
   <p class="mb-0">Biostatistician — <em>University of Cambridge</em></p>
 </div>
 
-<div class="card mb-3 p-3" style="max-width: 700px;">
+<div class="card mb-3 p-3" style="max-width: 1000px;">
   <h6 class="mb-1">Dr Tom Williams</h6>
   <p class="mb-0">Policy Advisor — <em>Wellcome Trust</em></p>
 </div>
 
-<div class="card mb-3 p-3" style="max-width: 700px;">
+<div class="card mb-3 p-3" style="max-width: 1000px;">
   <h6 class="mb-1">Prof Sarah Khan</h6>
   <p class="mb-0">Digital Health Specialist — <em>Imperial College London</em></p>
 </div>
 ```
+
+Katherine Barrett
+Emma Shellard
+Aurora Todisco
 
 
 ## Partners

@@ -91,20 +91,12 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
-<span class="menu-text">Home</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
-<span class="menu-text">About</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link" href="./team.html"> 
 <span class="menu-text">Team</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./resources.html"> 
-<span class="menu-text">Learn more</span></a>
+    <a class="nav-link" href="./contact.html"> 
+<span class="menu-text">Contact</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -119,79 +111,234 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><h1 class="title display-7">pmsims</h1></header>
+<main class="content page-columns page-full" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
 
 <div class="banner-container">
-  <div class="banner-text">
-    
-    <p>Tools to estimate minimum sample sizes for prediction and machine learning models</p>
-  </div>
   <img src="images/banner.png" alt="Banner" class="banner-img">
+  <div class="banner-text">
+  <h2 class="anchored">pmsims</h2>
+  <p>Tools to estimate minimum sample sizes for prediction and machine learning models</p>
+  </div>
 </div>
 <p>We’re creating a free, easy-to-use tool to help researchers calculate how much data they need to build accurate and reliable prediction models using machine learning and long-term health records. Developed in partnership with patients, carers, and charities, the tool will support safer, fairer, and more effective use of data in healthcare.</p>
 <p>Prediction models are already helping the NHS personalise care, plan treatments, and prevent illness before it starts. But many are built on too little data, leading to inaccurate results—especially for underrepresented groups. Our project addresses this problem by providing practical guidance on the data needed to develop models that are both powerful and fair.</p>
-<p>This project is led by a team at <a href="">King’s College London</a> and funded by the <a href="">National Institute for Health and Care Research</a> as part of the Research for Patient Benefit Programme. <a href="./about.html">Click here</a> to learn more about the team.</p>
-<div style="display: flex; gap: 1rem; align-items: center; padding-top: 1rem;">
-<p><img src="images/nihr.png" alt="NIHR logo" style="height: 100px; border-right: 1px solid #ccc; padding-right: 1.5rem;"> <img src="images/kcl.png" alt="King's College London logo" style="height: 100px; padding-left: 1.5rem;"></p>
+<p>This project is led by a team at <a href="">King’s College London</a> and funded by the <a href="">National Institute for Health and Care Research</a> as part of the Research for Patient Benefit Programme. To learn more, <a href="#about">see below</a>.</p>
+<div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 1rem; padding: 1rem; text-align: center;">
+  <div style="display: flex; align-items: center; justify-content: center; padding-right: 1rem; margin-right: 1rem;">
+    <img src="images/nihr.png" alt="NIHR logo" style="max-height: 80px; height: auto; max-width: 100%;">
+  </div>
+  <div style="display: flex; justify-content: center;">
+    <img src="images/kcl.png" alt="King's College London logo" style="max-height: 80px; height: auto; max-width: 100%;">
+  </div>
 </div>
+<div class="page-columns page-full">
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p class="page-columns page-full"><img src="images/prediction-placeholder.png" class="img-fluid quarto-figure quarto-figure-center figure-img column-screen-inset" style="padding-top:3rem;"></p>
+</figure>
+</div>
+</div>
+<section id="about" class="level1">
+<h1>What is the ‘pmsims’ project about?</h1>
+<ul>
+<li><p>NHS services use prediction tools to <span class="hl">help make decisions about patient care.</span> These tools rely on data to estimate what might happen in the future, like someone’s risk of developing a health condition.</p></li>
+<li><p>However, if the tools are built using too little data, their predictions can be <span class="hl">inaccurate or unfair</span>, particularly for people from underrepresented communities.</p></li>
+<li><p>We’re building a free, easy-to-use tool to help researchers estimate <span class="hl">how much data they need</span> to build accurate and fair prediction models—including newer approaches that use complex methods like machine learning.</p></li>
+<li><p>We’re working with patients and the public to understand their views, ensure accessibility, and raise awareness of the risks associated with using too little information. Our goal is to improve the fairness and accuracy of prediction tools used in healthcare.</p></li>
+</ul>
+</section>
+<section id="how-do-prediction-models-work" class="level1">
+<h1>How do prediction models work?</h1>
+<ul>
+<li><p>Prediction modelling uses <span class="hl">statistics or computer algorithms</span> to estimate what might happen in the future. More and more of these models are being created as larger datasets and better tools become available.</p></li>
+<li><p>For example, the <a href="https://www.qrisk.org/">QRISK</a> tool estimates a person’s risk of developing heart disease in the next 10 years. Doctors use it to decide who should be offered treatment to help prevent heart problems.</p></li>
+</ul>
+</section>
+<section id="why-sample-size-matters-in-prediction" class="level1">
+<h1>Why sample size matters in prediction</h1>
+<ul>
+<li><p>Many prediction models are developed using too little data. When this happens, the model can become too focused on the specific details of the sample it was trained on, rather than learning general patterns that apply more widely. This is known as overfitting. It means the model might appear accurate during development but make unreliable or unfair predictions in real-world settings.</p></li>
+<li><p>Small samples are especially problematic when making predictions for minoritised groups, as limited representation can lead to inaccurate and unfair predictions, potentially resulting in incorrect or even harmful treatment recommendations.</p></li>
+</ul>
+<div class="{=html}">
 <style>
-  .newsletter-box {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: #fbfbfb;
-    padding: 2rem;
-    margin: 2rem auto;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
-  }
-
-  .newsletter-box h2 {
-    margin-top: 0;
-  }
-
-  .newsletter-box form {
+  #sample-controls {
     display: flex;
-    gap: 0.5rem;
-    margin: 1.5rem 0;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    font-family: Lato, sans-serif;
   }
-
-  .newsletter-box input[type="email"] {
-    flex: 1;
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+  #sample-controls label {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
   }
-
-  .newsletter-box button {
-    padding: 0.5rem 1rem;
-    border: 1px solid #666;
-    background: #fff;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-
-  .newsletter-box p {
-    margin-bottom: 0;
+  #sampleSize {
+    width: 80%;
+    max-width: 500px;
   }
 </style>
+<div id="sample-controls">
+<p><label for="sampleSize"> Sample size: <span id="sampleSizeValue">100</span> </label> <input type="range" id="sampleSize" min="100" max="5000" step="100" value="100"></p>
+</div>
+<canvas id="predictionChart" width="700" height="270">
+</canvas>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@1.4.0"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&amp;display=swap" rel="stylesheet">
+<script>
+  const ctx = document.getElementById('predictionChart').getContext('2d');
+  const sampleSizeSlider = document.getElementById('sampleSize');
+  const sampleSizeValue = document.getElementById('sampleSizeValue');
+  const trueProbability = 0.6;
 
-<div class="newsletter-box">
-  <h2 class="anchored">Join our mailing list</h2>
-  <p>We’re currently developing the tool and would love to keep you updated as the project moves forward. If you’re interested in how prediction models work, why data size matters, or how this tool could support better, fairer research, sign up for occasional updates using the form below.</p>
+  function simulatePredictions(n, mean = trueProbability) {
+    const std = 0.3 * Math.exp(-n / 1000);
+    return Array.from({ length: 50 }, () => {
+      let val = mean + randn_bm() * std;
+      return Math.min(1, Math.max(0, val));
+    });
+  }
 
-  <form action="https://assets.mailerlite.com/jsonp/1616562/forms/158072248783078494/subscribe" method="post" target="_blank">
-    <input type="email" name="fields[email]" placeholder="Email" aria-label="Email" required="">
-    <button type="submit">Subscribe</button>
-    <input type="hidden" name="ml-submit" value="1">
-    <input type="hidden" name="anticsrf" value="true">
-  </form>
+  function randn_bm() {
+    let u = 0, v = 0;
+    while (u === 0) u = Math.random();
+    while (v === 0) v = Math.random();
+    return Math.sqrt(-2.0 * Math.log(u)) * Math.cos(2.0 * Math.PI * v);
+  }
 
-  <p>You’ll receive no more than four emails per year, and you can unsubscribe at any time with a single click.</p>
+  function stabilityComment(n) {
+    if (n <= 500) {
+      return "Low sample size produces highly unstable predictions — unreliable for individual prediction.";
+    } else if (n <= 2000) {
+      return "Moderate sample size — predictions are more stable but still variable.";
+    } else {
+      return "High sample size — predictions are stable and consistent.";
+    }
+  }
+
+  const chart = new Chart(ctx, {
+    type: 'scatter',
+    data: {
+      datasets: [{
+        data: [],
+        pointRadius: 4,
+        backgroundColor: 'rgba(0, 123, 255, 0.7)',
+      }]
+    },
+    options: {
+      animation: false,
+      plugins: {
+        tooltip: { enabled: false },
+        legend: { display: false },
+        annotation: {
+          annotations: {
+            trueLine: {
+              type: 'line',
+              xMin: trueProbability,
+              xMax: trueProbability,
+              borderColor: 'rgba(200, 0, 0, 0.8)',
+              borderWidth: 2
+            },
+            trueLabel: {
+              type: 'label',
+              xValue: trueProbability,
+              yValue: 0.35,
+              backgroundColor: 'rgba(200, 0, 0, 0.8)',
+              content: '0.6',
+              color: 'white',
+              font: {
+                size: 16,
+                family: 'Lato'
+              },
+              textAlign: 'center',
+              enabled: true
+            },
+            comment: {
+              type: 'label',
+              xValue: 0.5,
+              yValue: 0.9,
+              backgroundColor: 'rgba(245, 250, 255, 0.98)',
+              borderColor: 'rgba(0, 0, 0, 0.1)',
+              borderWidth: 1,
+              margin: 15,
+              padding: 10,
+              cornerRadius: 6,
+              font: {
+                size: 18,
+                family: 'Lato',
+                weight: 'normal'
+              },
+              content: stabilityComment(100),
+              position: 'center',
+              textAlign: 'center',
+              display: true
+            }
+          }
+        }
+      },
+      scales: {
+        x: {
+          min: 0,
+          max: 1,
+          title: {
+            display: true,
+            text: 'Predicted Probability',
+            font: {
+              size: 16,
+              family: 'Lato'
+            }
+          },
+          ticks: {
+            font: {
+              size: 16,
+              family: 'Lato'
+            }
+          }
+        },
+        y: {
+          min: 0,
+          max: 1,
+          display: false
+        }
+      }
+    },
+    plugins: [Chart.registry.getPlugin('annotation')]
+  });
+
+  function updateChart(n) {
+    const data = simulatePredictions(n).map(x => ({
+      x: x,
+      y: 0.5 + (Math.random() - 0.5) * 0.05
+    }));
+    chart.data.datasets[0].data = data;
+    chart.options.plugins.annotation.annotations.comment.content = stabilityComment(n);
+    chart.update();
+  }
+
+  updateChart(100);
+
+  sampleSizeSlider.addEventListener('input', () => {
+    const n = parseInt(sampleSizeSlider.value);
+    sampleSizeValue.textContent = n;
+    updateChart(n);
+  });
+</script>
+</div>
+<div style="background-color: #f5faff; border: 1px solid #003366; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05); padding: 1.5rem; border-radius: 0.5rem; margin: 2rem 0; font-size: 1.3rem; line-height: 1.6; color: #003366;">
+  <h2 style="margin-top: 0; font-size: 1.5rem;" class="anchored" data-anchor-id="why-sample-size-matters-in-prediction">How will this project help?</h2>
+  <ul style="padding-left: 2.1rem; margin: 1rem 0; list-style-position: outside;">
+    <li style="margin-bottom: 1rem;">An essential first step in building a model is estimating how much data is needed.</li>
+    <li style="margin-bottom: 1rem;">We’re creating <span class="hl">a simple, user-friendly tool</span> that estimates the minimum amount of data needed for different types of prediction models. It does this by generating synthetic (artificial) data of different sizes and testing how well models perform with each one.</li>
+    <li>This will help researchers decide how complex their model should be and help prevent models being developed without enough data, which can lead to inaccurate or unfair predictions and wasted research effort.</li>
+  </ul>
 </div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

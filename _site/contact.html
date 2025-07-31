@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Learning resources – pmsims</title>
+<title>contact – pmsims</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -94,7 +94,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Team</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./contact.html"> 
+    <a class="nav-link active" href="./contact.html" aria-current="page"> 
 <span class="menu-text">Contact</span></a>
   </li>  
 </ul>
@@ -112,94 +112,81 @@ ul.task-list li input[type="checkbox"] {
         
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Learning resources</h1>
-</div>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
-<div class="quarto-title-meta">
 
-    
-  
-    
+<style>
+  .newsletter-box {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fbfbfb;
+    padding: 2rem;
+    margin: 2rem auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+  }
+
+  .newsletter-box form {
+    display: flex;
+    gap: 0.5rem;
+    margin: 1.5rem 0;
+    flex-wrap: wrap;
+  }
+
+  .newsletter-box input[type="email"] {
+    flex: 1 1 250px;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .newsletter-box button {
+    padding: 0.5rem 1rem;
+    border: 1px solid #666;
+    background: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .newsletter-box p {
+    margin-bottom: 0;
+  }
+
+  .newsletter-box .section {
+    margin-top: 0rem;
+  }
+</style>
+
+<div class="newsletter-box">
+  <div class="section">
+    <h2 class="anchored">Join our mailing list</h2>
+    <p>We’re currently developing the tool and would love to keep you updated as the project moves forward. If you’re interested in how prediction models work, why data size matters, or how this tool could support better, fairer research, sign up for occasional updates using the form below.</p>
+
+    <form onsubmit="sendMailto(event)">
+      <input type="email" id="email" placeholder="Email" aria-label="Email" required="">
+      <button type="submit">Subscribe</button>
+    </form>
+
+    <p>You’ll receive no more than four emails per year, and you can unsubscribe at any time with a single click.</p>
   </div>
-  
 
-
-</header>
-
-
-<div>
-  <div class="row">
-    <div class="col-md-6"></div>
-<div class="card resource-card">
-<h3 class="anchored">What is prediction modelling?</h3>
-<p>An overview of how statistical models are used to make predictions in health research.</p>
-</div>
-<div class="card resource-card">
-<h3 class="anchored">What is prediction modelling?</h3>
-<p>An overview of how statistical models are used to make predictions in health research.</p>
-</div>
-
-<h3 class="anchored">What is prediction modelling?</h3>
-
-An overview of how statistical models are used to make predictions in health research.
-
-    <div class="col-md-6"></div>
-  </div>
-  <div class="row">
-    <div class="col-md-6"></div>
-    <div class="col-md-6"></div>
+  <div class="section">
+    <h2 class="anchored">Contact us</h2>
+    <p>If you have questions about the project, want to learn more, or are interested in collaborating, feel free to get in touch with the team.</p>
+    <button onclick="window.location.href='mailto:pmsims@kcl.ac.uk'">Contact us</button>
   </div>
 </div>
-<div class="grid quarto-layout-panel" data-layout-ncol="2">
-<div class="quarto-layout-row">
-<section id="what-is-prediction-modelling" class="level3 card resource-card quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<h3 class="anchored" data-anchor-id="what-is-prediction-modelling"><a href="./what-is-prediction.html">What is prediction modelling?</a></h3>
-<p>An overview of how statistical models are used to make predictions in health research.</p>
-</section>
-<section id="why-is-sample-size-important" class="level3 card resource-card quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<h3 class="anchored" data-anchor-id="why-is-sample-size-important"><a href="./why-sample-size.html">Why is sample size important?</a></h3>
-<p>Learn how sample size affects reliability, precision, and generalisability.</p>
-</section>
-</div>
-<div class="quarto-layout-row">
-<section id="how-does-our-software-work" class="level3 card resource-card quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<h3 class="anchored" data-anchor-id="how-does-our-software-work"><a href="./how-it-works.html">How does our software work?</a></h3>
-<p>A walkthrough of the tools we’ve built and how they support research workflows.</p>
-</section>
-<section id="frequently-asked-questions" class="level3 card resource-card quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<h3 class="anchored" data-anchor-id="frequently-asked-questions"><a href="./faq.html">Frequently asked questions</a></h3>
-<p>Quick answers to common queries about our approach, methods, and tools.</p>
-</section>
-</div>
-</div>
-<div class="grid quarto-layout-panel" data-layout-ncol="2">
-<div class="quarto-layout-row">
-<section id="what-is-prediction-modelling-1" class="level3 card resource-card quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<h3 class="anchored" data-anchor-id="what-is-prediction-modelling-1"><a href="./what-is-prediction.html">What is prediction modelling?</a></h3>
-<p>Start here with the basics of R and essential syntax.</p>
-</section>
-<section id="why-is-sample-size-important-1" class="level3 card resource-card quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<h3 class="anchored" data-anchor-id="why-is-sample-size-important-1"><a href="./why-sample-size.html">Why is sample size important?</a></h3>
-<p>Create effective plots using ggplot2 and other tools.</p>
-</section>
-</div>
-<div class="quarto-layout-row">
-<section id="how-does-our-software-work-1" class="level3 card resource-card quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<h3 class="anchored" data-anchor-id="how-does-our-software-work-1"><a href="./how-it-works.html">How does our software work?</a></h3>
-<p>Tidy, reshape, and clean data with the tidyverse.</p>
-</section>
-<section id="modelling" class="level3 card resource-card quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<h3 class="anchored" data-anchor-id="modelling"><a href="modelling.qmd">Modelling</a></h3>
-<p>Understand regression, classification, and tidymodels.</p>
-</section>
-</div>
-</div>
+
+<script>
+  function sendMailto(event) {
+    event.preventDefault();
+    const email = document.getElementById('email').value;
+    const subject = encodeURIComponent("I'd like to join the pmsims mailing list");
+    const body = encodeURIComponent("Please add me to the mailing list.\n\nEmail: " + email);
+    window.location.href = `mailto:pmsims@kcl.ac.uk?subject=${subject}&body=${body}`;
+  }
+</script>
 
 
 

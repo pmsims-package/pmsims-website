@@ -3,15 +3,17 @@ toc: false
 format:
   html:
     css: index.css
+    title-block: false
+    title-block-banner: false
 ---
 
 ```{=html}
 <div class="banner-container">
-  <div class="banner-text">
-    <h1>pmsims</h1>
-    <p>Tools to estimate minimum sample sizes for prediction and machine learning models</p>
-  </div>
   <img src="images/banner.png" alt="Banner" class="banner-img" />
+  <div class="banner-text">
+  <h2>pmsims</h2>
+  <p>Tools to estimate minimum sample sizes for prediction and machine learning models</p>
+  </div>
 </div>
 ```
 
@@ -30,12 +32,246 @@ powerful and fair.
 
 This project is led by a team at [King's College London]() and funded by the
 [National Institute for Health and Care Research]() as part of the Research
-for Patient Benefit Programme. [Click here](about.qmd) to learn more
-about the team.
+for Patient Benefit Programme. To learn more, [see below](#about).
 
-<div style="display: flex; gap: 1rem; align-items: center; padding-top: 1rem;">
-  <img src="images/nihr.png" alt="NIHR logo" style="height: 100px; border-right: 1px solid #ccc; padding-right: 1.5rem;">
-  <img src="images/kcl.png" alt="King's College London logo" style="height: 100px; padding-left: 1.5rem;">
+```{=html}
+<div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 1rem; padding: 1rem; text-align: center;">
+  <div style="display: flex; align-items: center; justify-content: center; padding-right: 1rem; margin-right: 1rem;">
+    <img src="images/nihr.png" alt="NIHR logo" style="max-height: 80px; height: auto; max-width: 100%;">
+  </div>
+  <div style="display: flex; justify-content: center;">
+    <img src="images/kcl.png" alt="King's College London logo" style="max-height: 80px; height: auto; max-width: 100%;">
+  </div>
+</div>
+```
+
+::: {.column-screen-inset}
+![](images/prediction-placeholder.png){fig-align="center" style="padding-top:3rem;"}
+:::
+
+# What is the 'pmsims' project about? {#about}
+
+* NHS services use prediction tools to [help make decisions about patient
+  care.]{.hl} These tools rely on data to estimate what might happen in the
+  future, like someone's risk of developing a health condition.
+
+* However, if the tools are built using too little data, their predictions
+  can be [inaccurate or unfair]{.hl}, particularly for people from
+  underrepresented communities.
+
+* We're building a free, easy-to-use tool to help researchers estimate [how
+  much data they need]{.hl} to build accurate and fair prediction
+  models---including newer approaches that use complex methods like machine
+  learning.
+
+* We're working with patients and the public to understand their views,
+  ensure accessibility, and raise awareness of the risks associated with using
+  too little information. Our goal is to improve the fairness and accuracy of
+  prediction tools used in healthcare.
+
+# How do prediction models work?
+
+* Prediction modelling uses [statistics or computer algorithms]{.hl} to
+  estimate what might happen in the future. More and more of these models are
+  being created as larger datasets and better tools become available.
+
+* For example, the [QRISK](https://www.qrisk.org/) tool estimates a
+  person's risk of developing heart disease in the next 10 years. Doctors use
+  it to decide who should be offered treatment to help prevent heart problems.
+
+# Why sample size matters in prediction
+
+* Many prediction models are developed using too little data. When this
+  happens, the model can become too focused on the specific details of the
+  sample it was trained on, rather than learning general patterns that apply
+  more widely. This is known as overfitting. It means the model might appear
+  accurate during development but make unreliable or unfair predictions in
+  real-world settings.
+
+* Small samples are especially problematic when making predictions for
+  minoritised groups, as limited representation can lead to inaccurate and
+  unfair predictions, potentially resulting in incorrect or even harmful
+  treatment recommendations.
+
+::: {=html}
+<style>
+  #sample-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    font-family: Lato, sans-serif;
+  }
+  #sample-controls label {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  #sampleSize {
+    width: 80%;
+    max-width: 500px;
+  }
+</style>
+
+<div id="sample-controls">
+  <label for="sampleSize">
+    Sample size: <span id="sampleSizeValue">100</span>
+  </label>
+  <input type="range" id="sampleSize" min="100" max="5000" step="100" value="100" />
 </div>
 
-{{< include form.qmd >}}
+<canvas id="predictionChart" width="700" height="270"></canvas>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@1.4.0"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<script>
+  const ctx = document.getElementById('predictionChart').getContext('2d');
+  const sampleSizeSlider = document.getElementById('sampleSize');
+  const sampleSizeValue = document.getElementById('sampleSizeValue');
+  const trueProbability = 0.6;
+
+  function simulatePredictions(n, mean = trueProbability) {
+    const std = 0.3 * Math.exp(-n / 1000);
+    return Array.from({ length: 50 }, () => {
+      let val = mean + randn_bm() * std;
+      return Math.min(1, Math.max(0, val));
+    });
+  }
+
+  function randn_bm() {
+    let u = 0, v = 0;
+    while (u === 0) u = Math.random();
+    while (v === 0) v = Math.random();
+    return Math.sqrt(-2.0 * Math.log(u)) * Math.cos(2.0 * Math.PI * v);
+  }
+
+  function stabilityComment(n) {
+    if (n <= 500) {
+      return "Low sample size produces highly unstable predictions — unreliable for individual prediction.";
+    } else if (n <= 2000) {
+      return "Moderate sample size — predictions are more stable but still variable.";
+    } else {
+      return "High sample size — predictions are stable and consistent.";
+    }
+  }
+
+  const chart = new Chart(ctx, {
+    type: 'scatter',
+    data: {
+      datasets: [{
+        data: [],
+        pointRadius: 4,
+        backgroundColor: 'rgba(0, 123, 255, 0.7)',
+      }]
+    },
+    options: {
+      animation: false,
+      plugins: {
+        tooltip: { enabled: false },
+        legend: { display: false },
+        annotation: {
+          annotations: {
+            trueLine: {
+              type: 'line',
+              xMin: trueProbability,
+              xMax: trueProbability,
+              borderColor: 'rgba(200, 0, 0, 0.8)',
+              borderWidth: 2
+            },
+            trueLabel: {
+              type: 'label',
+              xValue: trueProbability,
+              yValue: 0.35,
+              backgroundColor: 'rgba(200, 0, 0, 0.8)',
+              content: '0.6',
+              color: 'white',
+              font: {
+                size: 16,
+                family: 'Lato'
+              },
+              textAlign: 'center',
+              enabled: true
+            },
+            comment: {
+              type: 'label',
+              xValue: 0.5,
+              yValue: 0.9,
+              backgroundColor: 'rgba(245, 250, 255, 0.98)',
+              borderColor: 'rgba(0, 0, 0, 0.1)',
+              borderWidth: 1,
+              margin: 15,
+              padding: 10,
+              cornerRadius: 6,
+              font: {
+                size: 18,
+                family: 'Lato',
+                weight: 'normal'
+              },
+              content: stabilityComment(100),
+              position: 'center',
+              textAlign: 'center',
+              display: true
+            }
+          }
+        }
+      },
+      scales: {
+        x: {
+          min: 0,
+          max: 1,
+          title: {
+            display: true,
+            text: 'Predicted Probability',
+            font: {
+              size: 16,
+              family: 'Lato'
+            }
+          },
+          ticks: {
+            font: {
+              size: 16,
+              family: 'Lato'
+            }
+          }
+        },
+        y: {
+          min: 0,
+          max: 1,
+          display: false
+        }
+      }
+    },
+    plugins: [Chart.registry.getPlugin('annotation')]
+  });
+
+  function updateChart(n) {
+    const data = simulatePredictions(n).map(x => ({
+      x: x,
+      y: 0.5 + (Math.random() - 0.5) * 0.05
+    }));
+    chart.data.datasets[0].data = data;
+    chart.options.plugins.annotation.annotations.comment.content = stabilityComment(n);
+    chart.update();
+  }
+
+  updateChart(100);
+
+  sampleSizeSlider.addEventListener('input', () => {
+    const n = parseInt(sampleSizeSlider.value);
+    sampleSizeValue.textContent = n;
+    updateChart(n);
+  });
+</script>
+:::
+
+
+```{=html}
+<div style="background-color: #f5faff; border: 1px solid #003366; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05); padding: 1.5rem; border-radius: 0.5rem; margin: 2rem 0; font-size: 1.3rem; line-height: 1.6; color: #003366;">
+  <h2 style="margin-top: 0; font-size: 1.5rem;">How will this project help?</h2>
+  <ul style="padding-left: 2.1rem; margin: 1rem 0; list-style-position: outside;">
+    <li style="margin-bottom: 1rem;">An essential first step in building a model is estimating how much data is needed.</li>
+    <li style="margin-bottom: 1rem;">We’re creating <span class="hl">a simple, user-friendly tool</span> that estimates the minimum amount of data needed for different types of prediction models. It does this by generating synthetic (artificial) data of different sizes and testing how well models perform with each one.</li>
+    <li>This will help researchers decide how complex their model should be and help prevent models being developed without enough data, which can lead to inaccurate or unfair predictions and wasted research effort.</li>
+  </ul>
+</div>
+```

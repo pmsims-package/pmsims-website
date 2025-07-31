@@ -1,25 +1,28 @@
 
-# What the 'pmsims' project about?
 
-* NHS services use prediction tools to help make decisions about patient
-  care. These tools rely on data to estimate what might happen in the future,
-  like someone's risk of developing a health condition.
+# What is the 'pmsims' project about?
+
+* NHS services use prediction tools to [help make decisions about patient
+  care.]{.hl} These tools rely on data to estimate what might happen in the
+  future, like someone's risk of developing a health condition.
 
 * However, if the tools are built using too little data, their predictions
-  can be inaccurate or unfair, particularly for people from underrepresented
-  communities.
+  can be [inaccurate or unfair]{.hl}, particularly for people from
+  underrepresented communities.
 
-* We're building a free, easy-to-use tool to help researchers estimate how
-  much data they to build accurate and fair prediction models---including newer
-  approaches that use complex methods like machine learning. We're working
-  closely with patients and the public to understand their views, make our work
-  accessible, and raise awareness of the risks associated with using too little
-  information. Our goal is to improve the fairness and accuracy of prediction
-  tools used in healthcare.
+* We're building a free, easy-to-use tool to help researchers estimate [how
+  much data they need]{.hl} to build accurate and fair prediction
+  models---including newer approaches that use complex methods like machine
+  learning.
 
-# What is prediction modelling?
+* We're working with patients and the public to understand their views,
+  ensure accessibility, and raise awareness of the risks associated with using
+  too little information. Our goal is to improve the fairness and accuracy of
+  prediction tools used in healthcare.
 
-* Prediction modelling uses statistics or computer algorithms to
+# How do prediction models work?
+
+* Prediction modelling uses [statistics or computer algorithms]{.hl} to
   estimate what might happen in the future. More and more of these models are
   being created as larger datasets and better tools become available.
 
@@ -27,7 +30,7 @@
   person's risk of developing heart disease in the next 10 years. Doctors use
   it to decide who should be offered treatment to help prevent heart problems.
 
-# Why is sample size important?
+# Why sample size matters in prediction
 
 * Many prediction models are developed using too little data. When this
   happens, the model can become too focused on the specific details of the
@@ -211,7 +214,7 @@
 </script>
 :::
 
-### How will this project help?
+# How will this project help?
 
 * An essential first step in building a model is estimating how much data
   is needed.

@@ -51,3 +51,10 @@ body {
     max-width: 65ch;
   }
 }
+
+.hl {
+  background-color: #fff3cd;
+  padding: 0.1rem 0.3rem;
+  border-radius: 4px;
+  font-weight: 500;
+}

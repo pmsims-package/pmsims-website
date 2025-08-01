@@ -3,8 +3,10 @@ project:
   output-dir: "docs"
 
 website:
-  title: "pmsims"
+  title: "Home"
   navbar:
+    search: false
+    collapse: false
     background: primary
     pinned: true
     left:

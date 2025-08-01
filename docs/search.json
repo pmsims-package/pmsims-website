@@ -7,81 +7,11 @@
     "text": "What is prediction modelling?\nAn overview of how statistical models are used to make predictions in health research.\n\n\nWhat is prediction modelling?\nAn overview of how statistical models are used to make predictions in health research.\n\n\nWhat is prediction modelling?\n\nAn overview of how statistical models are used to make predictions in health research.\n\n    \n  \n  \n    \n    \n  \n\n\n\n\nWhat is prediction modelling?\nAn overview of how statistical models are used to make predictions in health research.\n\n\nWhy is sample size important?\nLearn how sample size affects reliability, precision, and generalisability.\n\n\n\n\nHow does our software work?\nA walkthrough of the tools we’ve built and how they support research workflows.\n\n\nFrequently asked questions\nQuick answers to common queries about our approach, methods, and tools.\n\n\n\n\n\n\nWhat is prediction modelling?\nStart here with the basics of R and essential syntax.\n\n\nWhy is sample size important?\nCreate effective plots using ggplot2 and other tools.\n\n\n\n\nHow does our software work?\nTidy, reshape, and clean data with the tidyverse.\n\n\nModelling\nUnderstand regression, classification, and tidymodels."
   },
   {
-    "objectID": "how-it-works.html",
-    "href": "how-it-works.html",
-    "title": "About Us",
-    "section": "",
-    "text": "We are a multidisciplinary team committed to advancing research and improving practice through collaborative, evidence-based approaches."
-  },
-  {
-    "objectID": "how-it-works.html#our-team",
-    "href": "how-it-works.html#our-team",
-    "title": "About Us",
-    "section": "Our Team",
-    "text": "Our Team\n\n  \n    Dr Ewan Carr\n    Principal Investigator\n    King's College London\n  \n  \n    \n  \n\n\n\n  \n    Dr Gordon Forbes\n    Principal Investigator\n    King’s College London\n  \n  \n    \n  \n\n\n\n  \n    Dr Alice White\n    Clinical Advisor\n    NHS England\n  \n  \n    \n  \n\n\n\n  \n    Dr Mark Evans\n    Industry Representative\n    AstraZeneca\n  \n  \n    \n  \n\n\n\n  \n    Prof Emma Brown\n    Statistician\n    Imperial College London"
-  },
-  {
-    "objectID": "how-it-works.html#our-advisory-group",
-    "href": "how-it-works.html#our-advisory-group",
-    "title": "About Us",
-    "section": "Our Advisory Group",
-    "text": "Our Advisory Group\n\n  Prof Alice White\n  Clinical Advisor — NHS England\n\n\n\n  Dr Mark Evans\n  Industry Representative — AstraZeneca\n\n\n\n  Prof Linda Zhao\n  Biostatistician — University of Cambridge\n\n\n\n  Dr Tom Williams\n  Policy Advisor — Wellcome Trust\n\n\n\n  Prof Sarah Khan\n  Digital Health Specialist — Imperial College London"
-  },
-  {
-    "objectID": "how-it-works.html#partners",
-    "href": "how-it-works.html#partners",
-    "title": "About Us",
-    "section": "Partners",
-    "text": "Partners"
-  },
-  {
-    "objectID": "form.html",
-    "href": "form.html",
-    "title": "pmsims",
-    "section": "",
-    "text": "Join our mailing list\n    We’re currently developing the tool and would love to keep you updated as the project moves forward. If you’re interested in how prediction models work, why data size matters, or how this tool could support better, fairer research, sign up for occasional updates using the form below.\n\n    \n      \n      Subscribe\n    \n\n    You’ll receive no more than four emails per year, and you can unsubscribe at any time with a single click.\n  \n\n  \n    Contact us\n    If you have questions about the project, want to learn more, or are interested in collaborating, feel free to get in touch with the team.\n    Contact us\n  \n\n\n\n\n\n\n  Join our mailing list\n  We’re currently developing the tool and would love to keep you updated as the project moves forward. If you’re interested in how prediction models work, why data size matters, or how this tool could support better, fairer research, sign up for occasional updates using the form below.\n\n  \n    \n    Subscribe\n    \n    \n  \n\n  You’ll receive no more than four emails per year, and you can unsubscribe at any time with a single click."
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "What is the ‘pmsims’ project about?",
     "section": "",
     "text": "pmsims\n  Tools to estimate minimum sample sizes for prediction and machine learning models\n  \n\nWe’re creating a free, easy-to-use tool to help researchers calculate how much data they need to build accurate and reliable prediction models using machine learning and long-term health records. Developed in partnership with patients, carers, and charities, the tool will support safer, fairer, and more effective use of data in healthcare.\nPrediction models are already helping the NHS personalise care, plan treatments, and prevent illness before it starts. But many are built on too little data, leading to inaccurate results—especially for underrepresented groups. Our project addresses this problem by providing practical guidance on the data needed to develop models that are both powerful and fair.\nThis project is led by a team at King’s College London and funded by the National Institute for Health and Care Research as part of the Research for Patient Benefit Programme. To learn more, see below.\n\n  \n    \n  \n  \n    \n  \n\n\n  \n\n\nWhat is the ‘pmsims’ project about?\n\nNHS services use prediction tools to help make decisions about patient care. These tools rely on data to estimate what might happen in the future, like someone’s risk of developing a health condition.\nHowever, if the tools are built using too little data, their predictions can be inaccurate or unfair, particularly for people from underrepresented communities.\nWe’re building a free, easy-to-use tool to help researchers estimate how much data they need to build accurate and fair prediction models—including newer approaches that use complex methods like machine learning.\nWe’re working with patients and the public to understand their views, ensure accessibility, and raise awareness of the risks associated with using too little information. Our goal is to improve the fairness and accuracy of prediction tools used in healthcare.\n\n\n\nHow do prediction models work?\n\nPrediction modelling uses statistics or computer algorithms to estimate what might happen in the future. More and more of these models are being created as larger datasets and better tools become available.\nFor example, the QRISK tool estimates a person’s risk of developing heart disease in the next 10 years. Doctors use it to decide who should be offered treatment to help prevent heart problems.\n\n\n\nWhy sample size matters in prediction\n\nMany prediction models are developed using too little data. When this happens, the model can become too focused on the specific details of the sample it was trained on, rather than learning general patterns that apply more widely. This is known as overfitting. It means the model might appear accurate during development but make unreliable or unfair predictions in real-world settings.\nSmall samples are especially problematic when making predictions for minoritised groups, as limited representation can lead to inaccurate and unfair predictions, potentially resulting in incorrect or even harmful treatment recommendations.\n\n\n\n\n Sample size: 100  \n\n\n\n\n\n\n\n\n\n  How will this project help?\n  An essential first step in building a model is estimating how much data is needed.\n  \n    We’re creating a simple, user-friendly tool that estimates the minimum amount of data needed for different types of prediction models. It does this by generating synthetic (artificial) data of different sizes and testing how well models perform with each one.\n    This will help researchers decide how complex their model should be and help prevent models being developed without enough data, which can lead to inaccurate or unfair predictions and wasted research effort.\n  \n\n\n\n\nGet in touch\n  We’re always keen to hear from you. Whether you have questions about the project, want to learn more, or are interested in collaborating—feel free to get in touch.\n\n  Contact us\n  \n\n\n  Join our mailing list\n  If you’re interested in how prediction models work, why data size matters, or how this tool could support better, fairer research, you can sign up for occasional updates.\n\n  Join mailing list\n\n  You’ll receive no more than four emails per year, and you can unsubscribe at any time with a single click."
-  },
-  {
-    "objectID": "why-sample-size.html",
-    "href": "why-sample-size.html",
-    "title": "About Us",
-    "section": "",
-    "text": "We are a multidisciplinary team committed to advancing research and improving practice through collaborative, evidence-based approaches."
-  },
-  {
-    "objectID": "why-sample-size.html#our-team",
-    "href": "why-sample-size.html#our-team",
-    "title": "About Us",
-    "section": "Our Team",
-    "text": "Our Team\n\n  \n    Dr Ewan Carr\n    Principal Investigator\n    King's College London\n  \n  \n    \n  \n\n\n\n  \n    Dr Gordon Forbes\n    Principal Investigator\n    King’s College London\n  \n  \n    \n  \n\n\n\n  \n    Dr Alice White\n    Clinical Advisor\n    NHS England\n  \n  \n    \n  \n\n\n\n  \n    Dr Mark Evans\n    Industry Representative\n    AstraZeneca\n  \n  \n    \n  \n\n\n\n  \n    Prof Emma Brown\n    Statistician\n    Imperial College London"
-  },
-  {
-    "objectID": "why-sample-size.html#our-advisory-group",
-    "href": "why-sample-size.html#our-advisory-group",
-    "title": "About Us",
-    "section": "Our Advisory Group",
-    "text": "Our Advisory Group\n\n  Prof Alice White\n  Clinical Advisor — NHS England\n\n\n\n  Dr Mark Evans\n  Industry Representative — AstraZeneca\n\n\n\n  Prof Linda Zhao\n  Biostatistician — University of Cambridge\n\n\n\n  Dr Tom Williams\n  Policy Advisor — Wellcome Trust\n\n\n\n  Prof Sarah Khan\n  Digital Health Specialist — Imperial College London"
-  },
-  {
-    "objectID": "why-sample-size.html#partners",
-    "href": "why-sample-size.html#partners",
-    "title": "About Us",
-    "section": "Partners",
-    "text": "Partners"
-  },
-  {
-    "objectID": "contact.html",
-    "href": "contact.html",
-    "title": "pmsims",
-    "section": "",
-    "text": "Join our mailing list\n    We’re currently developing the tool and would love to keep you updated as the project moves forward. If you’re interested in how prediction models work, why data size matters, or how this tool could support better, fairer research, sign up for occasional updates using the form below.\n\n    \n      \n      Subscribe\n    \n\n    You’ll receive no more than four emails per year, and you can unsubscribe at any time with a single click.\n  \n\n  \n    Contact us\n    If you have questions about the project, want to learn more, or are interested in collaborating, feel free to get in touch with the team.\n    Contact us"
   },
   {
     "objectID": "team.html",
@@ -110,61 +40,5 @@
     "title": "What is the ‘pmsims’ project about?",
     "section": "",
     "text": "What is the ‘pmsims’ project about?\n\nNHS services use prediction tools to help make decisions about patient care. These tools rely on data to estimate what might happen in the future, like someone’s risk of developing a health condition.\nHowever, if the tools are built using too little data, their predictions can be inaccurate or unfair, particularly for people from underrepresented communities.\nWe’re building a free, easy-to-use tool to help researchers estimate how much data they need to build accurate and fair prediction models—including newer approaches that use complex methods like machine learning.\nWe’re working with patients and the public to understand their views, ensure accessibility, and raise awareness of the risks associated with using too little information. Our goal is to improve the fairness and accuracy of prediction tools used in healthcare.\n\n\n\nHow do prediction models work?\n\nPrediction modelling uses statistics or computer algorithms to estimate what might happen in the future. More and more of these models are being created as larger datasets and better tools become available.\nFor example, the QRISK tool estimates a person’s risk of developing heart disease in the next 10 years. Doctors use it to decide who should be offered treatment to help prevent heart problems.\n\n\n\nWhy sample size matters in prediction\n\nMany prediction models are developed using too little data. When this happens, the model can become too focused on the specific details of the sample it was trained on, rather than learning general patterns that apply more widely. This is known as overfitting. It means the model might appear accurate during development but make unreliable or unfair predictions in real-world settings.\nSmall samples are especially problematic when making predictions for minoritised groups, as limited representation can lead to inaccurate and unfair predictions, potentially resulting in incorrect or even harmful treatment recommendations.\n\n\n\n\n Sample size: 100  \n\n\n\n\n\n\n\n\n\nHow will this project help?\n\nAn essential first step in building a model is estimating how much data is needed.\nWe’re creating a simple, user-friendly tool that estimates the minimum amount of data needed for different types of prediction models. It does this by generating synthetic (artificial) data of different sizes and testing how well models perform with each one.\nThis will help researchers decide how complex their model should be—and help prevent models being developed without enough data, which can lead to inaccurate or unfair predictions and wasted research effort."
-  },
-  {
-    "objectID": "faq.html",
-    "href": "faq.html",
-    "title": "About Us",
-    "section": "",
-    "text": "We are a multidisciplinary team committed to advancing research and improving practice through collaborative, evidence-based approaches."
-  },
-  {
-    "objectID": "faq.html#our-team",
-    "href": "faq.html#our-team",
-    "title": "About Us",
-    "section": "Our Team",
-    "text": "Our Team\n\n  \n    Dr Ewan Carr\n    Principal Investigator\n    King's College London\n  \n  \n    \n  \n\n\n\n  \n    Dr Gordon Forbes\n    Principal Investigator\n    King’s College London\n  \n  \n    \n  \n\n\n\n  \n    Dr Alice White\n    Clinical Advisor\n    NHS England\n  \n  \n    \n  \n\n\n\n  \n    Dr Mark Evans\n    Industry Representative\n    AstraZeneca\n  \n  \n    \n  \n\n\n\n  \n    Prof Emma Brown\n    Statistician\n    Imperial College London"
-  },
-  {
-    "objectID": "faq.html#our-advisory-group",
-    "href": "faq.html#our-advisory-group",
-    "title": "About Us",
-    "section": "Our Advisory Group",
-    "text": "Our Advisory Group\n\n  Prof Alice White\n  Clinical Advisor — NHS England\n\n\n\n  Dr Mark Evans\n  Industry Representative — AstraZeneca\n\n\n\n  Prof Linda Zhao\n  Biostatistician — University of Cambridge\n\n\n\n  Dr Tom Williams\n  Policy Advisor — Wellcome Trust\n\n\n\n  Prof Sarah Khan\n  Digital Health Specialist — Imperial College London"
-  },
-  {
-    "objectID": "faq.html#partners",
-    "href": "faq.html#partners",
-    "title": "About Us",
-    "section": "Partners",
-    "text": "Partners"
-  },
-  {
-    "objectID": "what-is-prediction.html",
-    "href": "what-is-prediction.html",
-    "title": "About Us",
-    "section": "",
-    "text": "We are a multidisciplinary team committed to advancing research and improving practice through collaborative, evidence-based approaches."
-  },
-  {
-    "objectID": "what-is-prediction.html#our-team",
-    "href": "what-is-prediction.html#our-team",
-    "title": "About Us",
-    "section": "Our Team",
-    "text": "Our Team\n\n  \n    Dr Ewan Carr\n    Principal Investigator\n    King's College London\n  \n  \n    \n  \n\n\n\n  \n    Dr Gordon Forbes\n    Principal Investigator\n    King’s College London\n  \n  \n    \n  \n\n\n\n  \n    Dr Alice White\n    Clinical Advisor\n    NHS England\n  \n  \n    \n  \n\n\n\n  \n    Dr Mark Evans\n    Industry Representative\n    AstraZeneca\n  \n  \n    \n  \n\n\n\n  \n    Prof Emma Brown\n    Statistician\n    Imperial College London"
-  },
-  {
-    "objectID": "what-is-prediction.html#our-advisory-group",
-    "href": "what-is-prediction.html#our-advisory-group",
-    "title": "About Us",
-    "section": "Our Advisory Group",
-    "text": "Our Advisory Group\n\n  Prof Alice White\n  Clinical Advisor — NHS England\n\n\n\n  Dr Mark Evans\n  Industry Representative — AstraZeneca\n\n\n\n  Prof Linda Zhao\n  Biostatistician — University of Cambridge\n\n\n\n  Dr Tom Williams\n  Policy Advisor — Wellcome Trust\n\n\n\n  Prof Sarah Khan\n  Digital Health Specialist — Imperial College London"
-  },
-  {
-    "objectID": "what-is-prediction.html#partners",
-    "href": "what-is-prediction.html#partners",
-    "title": "About Us",
-    "section": "Partners",
-    "text": "Partners"
   }
 ]

@@ -91,11 +91,15 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
+    <a class="nav-link" href="./index.html#about"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="./team.html"> 
 <span class="menu-text">Team</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./contact.html"> 
+    <a class="nav-link" href="./index.html#contact"> 
 <span class="menu-text">Contact</span></a>
   </li>  
 </ul>
@@ -111,7 +115,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content page-columns page-full" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
@@ -134,14 +138,10 @@ ul.task-list li input[type="checkbox"] {
     <img src="images/kcl.png" alt="King's College London logo" style="max-height: 80px; height: auto; max-width: 100%;">
   </div>
 </div>
-<div class="page-columns page-full">
-<div class="quarto-figure quarto-figure-center page-columns page-full">
-<figure class="figure page-columns page-full">
-<p class="page-columns page-full"><img src="images/prediction-placeholder.png" class="img-fluid quarto-figure quarto-figure-center figure-img column-screen-inset" style="padding-top:3rem;"></p>
-</figure>
+<div class="banner-container" style="margin-top: 3rem;" id="about">
+  <img src="images/prediction-placeholder.png" alt="Banner" class="banner-img">
 </div>
-</div>
-<section id="about" class="level1">
+<section id="what-is-the-pmsims-project-about" class="level1">
 <h1>What is the ‘pmsims’ project about?</h1>
 <ul>
 <li><p>NHS services use prediction tools to <span class="hl">help make decisions about patient care.</span> These tools rely on data to estimate what might happen in the future, like someone’s risk of developing a health condition.</p></li>
@@ -160,7 +160,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="why-sample-size-matters-in-prediction" class="level1">
 <h1>Why sample size matters in prediction</h1>
 <ul>
-<li><p>Many prediction models are developed using too little data. When this happens, the model can become too focused on the specific details of the sample it was trained on, rather than learning general patterns that apply more widely. This is known as overfitting. It means the model might appear accurate during development but make unreliable or unfair predictions in real-world settings.</p></li>
+<li><p>Many prediction models are developed using <span class="hl">too little data</span>. When this happens, the model can become too focused on the specific details of the sample it was trained on, rather than learning general patterns that apply more widely. This is known as <span class="hl">overfitting</span>. It means the model might appear accurate during development but make unreliable or unfair predictions in real-world settings.</p></li>
 <li><p>Small samples are especially problematic when making predictions for minoritised groups, as limited representation can lead to inaccurate and unfair predictions, potentially resulting in incorrect or even harmful treatment recommendations.</p></li>
 </ul>
 <div class="{=html}">
@@ -330,12 +330,65 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div style="background-color: #f5faff; border: 1px solid #003366; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05); padding: 1.5rem; border-radius: 0.5rem; margin: 2rem 0; font-size: 1.3rem; line-height: 1.6; color: #003366;">
   <h2 style="margin-top: 0; font-size: 1.5rem;" class="anchored" data-anchor-id="why-sample-size-matters-in-prediction">How will this project help?</h2>
+  <p>An essential first step in building a model is estimating how much data is needed.</p>
   <ul style="padding-left: 2.1rem; margin: 1rem 0; list-style-position: outside;">
-    <li style="margin-bottom: 1rem;">An essential first step in building a model is estimating how much data is needed.</li>
     <li style="margin-bottom: 1rem;">We’re creating <span class="hl">a simple, user-friendly tool</span> that estimates the minimum amount of data needed for different types of prediction models. It does this by generating synthetic (artificial) data of different sizes and testing how well models perform with each one.</li>
-    <li>This will help researchers decide how complex their model should be and help prevent models being developed without enough data, which can lead to inaccurate or unfair predictions and wasted research effort.</li>
+    <li>This will help researchers decide how complex their model should be and help <span class="hl">prevent models being developed without enough data</span>, which can lead to inaccurate or unfair predictions and wasted research effort.</li>
   </ul>
 </div>
+<style>
+  .contact-box {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fbfbfb;
+    padding: 2rem;
+    padding-bottom: 1.5rem;
+    margin: 2rem auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+  }
+
+  .contact-box p {
+    margin-bottom: 1rem;
+  }
+
+  .contact-box button {
+    padding: 0.5rem 1rem;
+    border: 1px solid #666;
+    background: #073e66;
+    color: #ffffff;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .contact-box h2 {
+    margin-top: 0;
+  }
+</style>
+
+<div class="contact-box">
+<h2 class="anchored">Get in touch</h2>
+  <p>We’re always keen to hear from you. Whether you have questions about the project, want to learn more, or are interested in collaborating—feel free to get in touch.</p>
+
+  <button onclick="window.location.href='mailto:pmsims@kcl.ac.uk'">Contact us</button>
+  </div>
+
+<div class="contact-box" style="padding-bottom: 0.5rem;">
+  <h2 class="anchored">Join our mailing list</h2>
+  <p>If you’re interested in how prediction models work, why data size matters, or how this tool could support better, fairer research, you can sign up for occasional updates.</p>
+
+  <button onclick="subscribeToMailingList()">Join mailing list</button>
+
+  <p style="padding-top: 1rem; padding-bottom: 0rem;">You’ll receive no more than four emails per year, and you can unsubscribe at any time with a single click.</p>
+</div>
+
+<script>
+  function subscribeToMailingList() {
+    const subject = encodeURIComponent("I'd like to join the pmsims mailing list");
+    const body = encodeURIComponent("Please add me to the mailing list.");
+    window.location.href = `mailto:pmsims@kcl.ac.uk?subject=${subject}&body=${body}`;
+  }
+</script>
 
 
 </section>

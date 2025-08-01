@@ -6,9 +6,11 @@ website:
   navbar:
     background: primary
     left:
+      - href: index.qmd#about
+        text: About
       - href: team.qmd
         text: Team
-      - href: contact.qmd
+      - href: index.qmd#contact
         text: Contact
 
 format:

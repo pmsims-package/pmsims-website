@@ -45,11 +45,13 @@ for Patient Benefit Programme. To learn more, [see below](#about).
 </div>
 ```
 
-::: {.column-screen-inset}
-![](images/prediction-placeholder.png){fig-align="center" style="padding-top:3rem;"}
-:::
+```{=html}
+<div class="banner-container" style="margin-top: 3rem;" id="about">
+  <img src="images/prediction-placeholder.png" alt="Banner" class="banner-img" />
+</div>
+```
 
-# What is the 'pmsims' project about? {#about}
+# What is the 'pmsims' project about?
 
 * NHS services use prediction tools to [help make decisions about patient
   care.]{.hl} These tools rely on data to estimate what might happen in the
@@ -81,12 +83,12 @@ for Patient Benefit Programme. To learn more, [see below](#about).
 
 # Why sample size matters in prediction
 
-* Many prediction models are developed using too little data. When this
+* Many prediction models are developed using [too little data]{.hl}. When this
   happens, the model can become too focused on the specific details of the
   sample it was trained on, rather than learning general patterns that apply
-  more widely. This is known as overfitting. It means the model might appear
-  accurate during development but make unreliable or unfair predictions in
-  real-world settings.
+  more widely. This is known as [overfitting]{.hl}. It means the model might
+  appear accurate during development but make unreliable or unfair predictions
+  in real-world settings.
 
 * Small samples are especially problematic when making predictions for
   minoritised groups, as limited representation can lead to inaccurate and
@@ -268,10 +270,66 @@ for Patient Benefit Programme. To learn more, [see below](#about).
 ```{=html}
 <div style="background-color: #f5faff; border: 1px solid #003366; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05); padding: 1.5rem; border-radius: 0.5rem; margin: 2rem 0; font-size: 1.3rem; line-height: 1.6; color: #003366;">
   <h2 style="margin-top: 0; font-size: 1.5rem;">How will this project help?</h2>
+  <p>An essential first step in building a model is estimating how much data is needed.</p>
   <ul style="padding-left: 2.1rem; margin: 1rem 0; list-style-position: outside;">
-    <li style="margin-bottom: 1rem;">An essential first step in building a model is estimating how much data is needed.</li>
     <li style="margin-bottom: 1rem;">We’re creating <span class="hl">a simple, user-friendly tool</span> that estimates the minimum amount of data needed for different types of prediction models. It does this by generating synthetic (artificial) data of different sizes and testing how well models perform with each one.</li>
-    <li>This will help researchers decide how complex their model should be and help prevent models being developed without enough data, which can lead to inaccurate or unfair predictions and wasted research effort.</li>
+    <li>This will help researchers decide how complex their model should be and help <span class="hl">prevent models being developed without enough data</span>, which can lead to inaccurate or unfair predictions and wasted research effort.</li>
   </ul>
 </div>
+```
+
+```{=html}
+<style>
+  .contact-box {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fbfbfb;
+    padding: 2rem;
+    padding-bottom: 1.5rem;
+    margin: 2rem auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+  }
+
+  .contact-box p {
+    margin-bottom: 1rem;
+  }
+
+  .contact-box button {
+    padding: 0.5rem 1rem;
+    border: 1px solid #666;
+    background: #073e66;
+    color: #ffffff;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .contact-box h2 {
+    margin-top: 0;
+  }
+</style>
+
+<div class="contact-box">
+<h2>Get in touch</h2>
+  <p>We’re always keen to hear from you. Whether you have questions about the project, want to learn more, or are interested in collaborating—feel free to get in touch.</p>
+
+  <button onclick="window.location.href='mailto:pmsims@kcl.ac.uk'">Contact us</button>
+  </div>
+
+<div class="contact-box" style="padding-bottom: 0.5rem;">
+  <h2>Join our mailing list</h2>
+  <p>If you’re interested in how prediction models work, why data size matters, or how this tool could support better, fairer research, you can sign up for occasional updates.</p>
+
+  <button onclick="subscribeToMailingList()">Join mailing list</button>
+
+  <p style="padding-top: 1rem; padding-bottom: 0rem;">You’ll receive no more than four emails per year, and you can unsubscribe at any time with a single click.</p>
+</div>
+
+<script>
+  function subscribeToMailingList() {
+    const subject = encodeURIComponent("I'd like to join the pmsims mailing list");
+    const body = encodeURIComponent("Please add me to the mailing list.");
+    window.location.href = `mailto:pmsims@kcl.ac.uk?subject=${subject}&body=${body}`;
+  }
+</script>
 ```

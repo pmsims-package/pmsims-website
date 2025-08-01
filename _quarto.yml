@@ -5,6 +5,7 @@ website:
   title: "pmsims"
   navbar:
     background: primary
+    pinned: true
     left:
       - href: index.qmd#about
         text: About

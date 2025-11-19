@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -31,14 +31,19 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="./">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-155776ec0ed7cce91fcaac024dfce2a9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-0972c629e1b492d1686b9f9ff7e8c28f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-3a7a46878e35abfdf976ac6d5ef7cc96.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-0972c629e1b492d1686b9f9ff7e8c28f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -156,171 +161,6 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Many prediction models are developed using <span class="hl">too little data</span>. When this happens, the model can become too focused on the specific details of the sample it was trained on, rather than learning general patterns that apply more widely. This is known as <span class="hl">overfitting</span>. It means the model might appear accurate during development but make unreliable or unfair predictions in real-world settings.</p></li>
 <li><p>Small samples are especially problematic when making predictions for minoritised groups, as limited representation can lead to inaccurate and unfair predictions, potentially resulting in incorrect or even harmful treatment recommendations.</p></li>
 </ul>
-<div class="{=html}">
-<style>
-  #sample-controls {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 1.5rem;
-    font-family: Lato, sans-serif;
-  }
-  #sample-controls label {
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-  }
-  #sampleSize {
-    width: 80%;
-    max-width: 500px;
-  }
-</style>
-<div id="sample-controls">
-<p><label for="sampleSize"> Sample size: <span id="sampleSizeValue">100</span> </label> <input type="range" id="sampleSize" min="100" max="5000" step="100" value="100"></p>
-</div>
-<canvas id="predictionChart" width="700" height="270">
-</canvas>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@1.4.0"></script>
-<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&amp;display=swap" rel="stylesheet">
-<script>
-  const ctx = document.getElementById('predictionChart').getContext('2d');
-  const sampleSizeSlider = document.getElementById('sampleSize');
-  const sampleSizeValue = document.getElementById('sampleSizeValue');
-  const trueProbability = 0.6;
-
-  function simulatePredictions(n, mean = trueProbability) {
-    const std = 0.3 * Math.exp(-n / 1000);
-    return Array.from({ length: 50 }, () => {
-      let val = mean + randn_bm() * std;
-      return Math.min(1, Math.max(0, val));
-    });
-  }
-
-  function randn_bm() {
-    let u = 0, v = 0;
-    while (u === 0) u = Math.random();
-    while (v === 0) v = Math.random();
-    return Math.sqrt(-2.0 * Math.log(u)) * Math.cos(2.0 * Math.PI * v);
-  }
-
-  function stabilityComment(n) {
-    if (n <= 500) {
-      return "Low sample size produces highly unstable predictions — unreliable for individual prediction.";
-    } else if (n <= 2000) {
-      return "Moderate sample size — predictions are more stable but still variable.";
-    } else {
-      return "High sample size — predictions are stable and consistent.";
-    }
-  }
-
-  const chart = new Chart(ctx, {
-    type: 'scatter',
-    data: {
-      datasets: [{
-        data: [],
-        pointRadius: 4,
-        backgroundColor: 'rgba(0, 123, 255, 0.7)',
-      }]
-    },
-    options: {
-      animation: false,
-      plugins: {
-        tooltip: { enabled: false },
-        legend: { display: false },
-        annotation: {
-          annotations: {
-            trueLine: {
-              type: 'line',
-              xMin: trueProbability,
-              xMax: trueProbability,
-              borderColor: 'rgba(200, 0, 0, 0.8)',
-              borderWidth: 2
-            },
-            trueLabel: {
-              type: 'label',
-              xValue: trueProbability,
-              yValue: 0.35,
-              backgroundColor: 'rgba(200, 0, 0, 0.8)',
-              content: '0.6',
-              color: 'white',
-              font: {
-                size: 16,
-                family: 'Lato'
-              },
-              textAlign: 'center',
-              enabled: true
-            },
-            comment: {
-              type: 'label',
-              xValue: 0.5,
-              yValue: 0.9,
-              backgroundColor: 'rgba(245, 250, 255, 0.98)',
-              borderColor: 'rgba(0, 0, 0, 0.1)',
-              borderWidth: 1,
-              margin: 15,
-              padding: 10,
-              cornerRadius: 6,
-              font: {
-                size: 18,
-                family: 'Lato',
-                weight: 'normal'
-              },
-              content: stabilityComment(100),
-              position: 'center',
-              textAlign: 'center',
-              display: true
-            }
-          }
-        }
-      },
-      scales: {
-        x: {
-          min: 0,
-          max: 1,
-          title: {
-            display: true,
-            text: 'Predicted Probability',
-            font: {
-              size: 16,
-              family: 'Lato'
-            }
-          },
-          ticks: {
-            font: {
-              size: 16,
-              family: 'Lato'
-            }
-          }
-        },
-        y: {
-          min: 0,
-          max: 1,
-          display: false
-        }
-      }
-    },
-    plugins: [Chart.registry.getPlugin('annotation')]
-  });
-
-  function updateChart(n) {
-    const data = simulatePredictions(n).map(x => ({
-      x: x,
-      y: 0.5 + (Math.random() - 0.5) * 0.05
-    }));
-    chart.data.datasets[0].data = data;
-    chart.options.plugins.annotation.annotations.comment.content = stabilityComment(n);
-    chart.update();
-  }
-
-  updateChart(100);
-
-  sampleSizeSlider.addEventListener('input', () => {
-    const n = parseInt(sampleSizeSlider.value);
-    sampleSizeValue.textContent = n;
-    updateChart(n);
-  });
-</script>
-</div>
 <div style="background-color: #f5faff; border: 1px solid #003366; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05); padding: 1.5rem; border-radius: 0.5rem; margin: 2rem 0; font-size: 1.3rem; line-height: 1.6; color: #003366;">
   <h2 style="margin-top: 0; font-size: 1.5rem;" class="anchored" data-anchor-id="why-sample-size-matters-in-prediction">How will this project help?</h2>
   <p>An essential first step in building a model is estimating how much data is needed.</p>
@@ -438,13 +278,14 @@ ul.task-list li input[type="checkbox"] {
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

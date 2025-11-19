@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Learning resources – Home</title>
+<title>tool – Home</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -114,93 +114,175 @@ ul.task-list li input[type="checkbox"] {
         
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Learning resources</h1>
+
+
+
+<div class="{=html}">
+<style>
+  #sample-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    font-family: Lato, sans-serif;
+  }
+  #sample-controls label {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  #sampleSize {
+    width: 80%;
+    max-width: 500px;
+  }
+</style>
+<div id="sample-controls">
+<p><label for="sampleSize"> Sample size: <span id="sampleSizeValue">100</span> </label> <input type="range" id="sampleSize" min="100" max="5000" step="100" value="100"></p>
 </div>
+<canvas id="predictionChart" width="700" height="270">
+</canvas>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@1.4.0"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&amp;display=swap" rel="stylesheet">
+<script>
+  const ctx = document.getElementById('predictionChart').getContext('2d');
+  const sampleSizeSlider = document.getElementById('sampleSize');
+  const sampleSizeValue = document.getElementById('sampleSizeValue');
+  const trueProbability = 0.6;
 
+  function simulatePredictions(n, mean = trueProbability) {
+    const std = 0.3 * Math.exp(-n / 1000);
+    return Array.from({ length: 50 }, () => {
+      let val = mean + randn_bm() * std;
+      return Math.min(1, Math.max(0, val));
+    });
+  }
 
+  function randn_bm() {
+    let u = 0, v = 0;
+    while (u === 0) u = Math.random();
+    while (v === 0) v = Math.random();
+    return Math.sqrt(-2.0 * Math.log(u)) * Math.cos(2.0 * Math.PI * v);
+  }
 
-<div class="quarto-title-meta">
+  function stabilityComment(n) {
+    if (n <= 500) {
+      return "Low sample size produces highly unstable predictions — unreliable for individual prediction.";
+    } else if (n <= 2000) {
+      return "Moderate sample size — predictions are more stable but still variable.";
+    } else {
+      return "High sample size — predictions are stable and consistent.";
+    }
+  }
 
-    
-  
-    
-  </div>
-  
+  const chart = new Chart(ctx, {
+    type: 'scatter',
+    data: {
+      datasets: [{
+        data: [],
+        pointRadius: 4,
+        backgroundColor: 'rgba(0, 123, 255, 0.7)',
+      }]
+    },
+    options: {
+      animation: false,
+      plugins: {
+        tooltip: { enabled: false },
+        legend: { display: false },
+        annotation: {
+          annotations: {
+            trueLine: {
+              type: 'line',
+              xMin: trueProbability,
+              xMax: trueProbability,
+              borderColor: 'rgba(200, 0, 0, 0.8)',
+              borderWidth: 2
+            },
+            trueLabel: {
+              type: 'label',
+              xValue: trueProbability,
+              yValue: 0.35,
+              backgroundColor: 'rgba(200, 0, 0, 0.8)',
+              content: '0.6',
+              color: 'white',
+              font: {
+                size: 16,
+                family: 'Lato'
+              },
+              textAlign: 'center',
+              enabled: true
+            },
+            comment: {
+              type: 'label',
+              xValue: 0.5,
+              yValue: 0.9,
+              backgroundColor: 'rgba(245, 250, 255, 0.98)',
+              borderColor: 'rgba(0, 0, 0, 0.1)',
+              borderWidth: 1,
+              margin: 15,
+              padding: 10,
+              cornerRadius: 6,
+              font: {
+                size: 18,
+                family: 'Lato',
+                weight: 'normal'
+              },
+              content: stabilityComment(100),
+              position: 'center',
+              textAlign: 'center',
+              display: true
+            }
+          }
+        }
+      },
+      scales: {
+        x: {
+          min: 0,
+          max: 1,
+          title: {
+            display: true,
+            text: 'Predicted Probability',
+            font: {
+              size: 16,
+              family: 'Lato'
+            }
+          },
+          ticks: {
+            font: {
+              size: 16,
+              family: 'Lato'
+            }
+          }
+        },
+        y: {
+          min: 0,
+          max: 1,
+          display: false
+        }
+      }
+    },
+    plugins: [Chart.registry.getPlugin('annotation')]
+  });
 
+  function updateChart(n) {
+    const data = simulatePredictions(n).map(x => ({
+      x: x,
+      y: 0.5 + (Math.random() - 0.5) * 0.05
+    }));
+    chart.data.datasets[0].data = data;
+    chart.options.plugins.annotation.annotations.comment.content = stabilityComment(n);
+    chart.update();
+  }
 
-</header>
+  updateChart(100);
 
-
-<div>
-  <div class="row">
-    <div class="col-md-6"></div>
-<div class="card resource-card">
-<h3 class="anchored">What is prediction modelling?</h3>
-<p>An overview of how statistical models are used to make predictions in health research.</p>
-</div>
-<div class="card resource-card">
-<h3 class="anchored">What is prediction modelling?</h3>
-<p>An overview of how statistical models are used to make predictions in health research.</p>
-</div>
-
-<h3 class="anchored">What is prediction modelling?</h3>
-
-An overview of how statistical models are used to make predictions in health research.
-
-    <div class="col-md-6"></div>
-  </div>
-  <div class="row">
-    <div class="col-md-6"></div>
-    <div class="col-md-6"></div>
-  </div>
-</div>
-<div class="grid quarto-layout-panel" data-layout-ncol="2">
-<div class="quarto-layout-row">
-<section id="what-is-prediction-modelling" class="level3 card resource-card quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<h3 class="anchored" data-anchor-id="what-is-prediction-modelling"><a href="what-is-prediction.qmd">What is prediction modelling?</a></h3>
-<p>An overview of how statistical models are used to make predictions in health research.</p>
-</section>
-<section id="why-is-sample-size-important" class="level3 card resource-card quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<h3 class="anchored" data-anchor-id="why-is-sample-size-important"><a href="why-sample-size.qmd">Why is sample size important?</a></h3>
-<p>Learn how sample size affects reliability, precision, and generalisability.</p>
-</section>
-</div>
-<div class="quarto-layout-row">
-<section id="how-does-our-software-work" class="level3 card resource-card quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<h3 class="anchored" data-anchor-id="how-does-our-software-work"><a href="how-it-works.qmd">How does our software work?</a></h3>
-<p>A walkthrough of the tools we’ve built and how they support research workflows.</p>
-</section>
-<section id="frequently-asked-questions" class="level3 card resource-card quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<h3 class="anchored" data-anchor-id="frequently-asked-questions"><a href="faq.qmd">Frequently asked questions</a></h3>
-<p>Quick answers to common queries about our approach, methods, and tools.</p>
-</section>
-</div>
-</div>
-<div class="grid quarto-layout-panel" data-layout-ncol="2">
-<div class="quarto-layout-row">
-<section id="what-is-prediction-modelling-1" class="level3 card resource-card quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<h3 class="anchored" data-anchor-id="what-is-prediction-modelling-1"><a href="what-is-prediction.qmd">What is prediction modelling?</a></h3>
-<p>Start here with the basics of R and essential syntax.</p>
-</section>
-<section id="why-is-sample-size-important-1" class="level3 card resource-card quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<h3 class="anchored" data-anchor-id="why-is-sample-size-important-1"><a href="why-sample-size.qmd">Why is sample size important?</a></h3>
-<p>Create effective plots using ggplot2 and other tools.</p>
-</section>
-</div>
-<div class="quarto-layout-row">
-<section id="how-does-our-software-work-1" class="level3 card resource-card quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<h3 class="anchored" data-anchor-id="how-does-our-software-work-1"><a href="how-it-works.qmd">How does our software work?</a></h3>
-<p>Tidy, reshape, and clean data with the tidyverse.</p>
-</section>
-<section id="modelling" class="level3 card resource-card quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<h3 class="anchored" data-anchor-id="modelling"><a href="modelling.qmd">Modelling</a></h3>
-<p>Understand regression, classification, and tidymodels.</p>
-</section>
-</div>
+  sampleSizeSlider.addEventListener('input', () => {
+    const n = parseInt(sampleSizeSlider.value);
+    sampleSizeValue.textContent = n;
+    updateChart(n);
+  });
+</script>
 </div>
 
 

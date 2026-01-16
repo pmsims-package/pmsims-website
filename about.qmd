@@ -1,4 +1,9 @@
+---
+title: "About"
+format: html
+---
 
+This page provides a short overview of the project, why sample size matters, and how prediction models are used in practice.
 
 # What is the 'pmsims' project about?
 

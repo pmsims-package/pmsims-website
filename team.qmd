@@ -9,79 +9,79 @@ page-layout: full
 <div class="container">
 
   <!-- PI: Ewan -->
-  <div class="card mb-4 p-3 d-flex flex-row align-items-center justify-content-between" style="max-width: 1000px;">
-    <div>
+  <div class="card mb-4 p-3 d-flex flex-column flex-md-row align-items-center justify-content-between team-card" style="max-width: 1000px;">
+    <div class="text-center text-md-start">
       <h4 class="mb-1"><a href="https://www.kcl.ac.uk/people/ewan-carr">Dr Ewan Carr</a></h4>
       <p class="mb-0">Principal Investigator</p>
       <p><em>King's College London</em></p>
     </div>
-    <div>
+    <div class="mt-3 mt-md-0">
       <img src="images/ewan.png" style="max-width: 100px; height: auto;" alt="Portrait of Dr Ewan Carr">
     </div>
   </div>
 
   <!-- PI: Gordon -->
-  <div class="card mb-4 p-3 d-flex flex-row align-items-center justify-content-between" style="max-width: 1000px;">
-    <div>
+  <div class="card mb-4 p-3 d-flex flex-column flex-md-row align-items-center justify-content-between team-card" style="max-width: 1000px;">
+    <div class="text-center text-md-start">
       <h4 class="mb-1"><a href="https://www.kcl.ac.uk/people/mr-gordon-forbes">Dr Gordon Forbes</a></h4>
       <p class="mb-0">Principal Investigator</p>
-      <p><em>King’s College London</em></p>
+      <p><em>King's College London</em></p>
     </div>
-    <div>
+    <div class="mt-3 mt-md-0">
       <img src="images/gordon.png" style="max-width: 100px; height: auto;" alt="Portrait of Dr Gordon Forbes">
     </div>
   </div>
 
-  <div class="card mb-4 p-3 d-flex flex-row align-items-center justify-content-between" style="max-width: 1000px;">
-    <div>
+  <div class="card mb-4 p-3 d-flex flex-column flex-md-row align-items-center justify-content-between team-card" style="max-width: 1000px;">
+    <div class="text-center text-md-start">
       <h4 class="mb-1"><a href="https://www.bmj.com/about-bmj/advisory-panels/patient-panel-members/sarah-markham">Dr Sarah Markham</a></h4>
       <p class="mb-0">Co-applicant</p>
       <p><em>King's College London</em></p>
     </div>
-    <div>
+    <div class="mt-3 mt-md-0">
       <img src="images/sarah.png" style="max-width: 100px; height: auto;" alt="Dr Sarah Markham">
     </div>
   </div>
-  <div class="card mb-4 p-3 d-flex flex-row align-items-center justify-content-between" style="max-width: 1000px;">
-    <div>
+  <div class="card mb-4 p-3 d-flex flex-column flex-md-row align-items-center justify-content-between team-card" style="max-width: 1000px;">
+    <div class="text-center text-md-start">
       <h4 class="mb-1"><a href="https://www.kcl.ac.uk/people/ridwan-oyebayo-olaniran">Dr Ridwan Olaniran</a></h4>
       <p class="mb-0">Postdoctoral Research Associate</p>
       <p><em>King's College London</em></p>
     </div>
-    <div>
+    <div class="mt-3 mt-md-0">
       <img src="images/ridwan.png" style="max-width: 100px; height: auto;" alt="Dr Ridwan Olaniran">
     </div>
   </div>
 
-  <div class="card mb-4 p-3 d-flex flex-row align-items-center justify-content-between" style="max-width: 1000px;">
-    <div>
+  <div class="card mb-4 p-3 d-flex flex-column flex-md-row align-items-center justify-content-between team-card" style="max-width: 1000px;">
+    <div class="text-center text-md-start">
       <h4 class="mb-1"><a href="https://www.kcl.ac.uk/people/diana-shamsutdinova">Dr Diana Shamsutdinova</a></h4>
       <p class="mb-0">Co-applicant</p>
-      <p><em>King’s College London</em></p>
+      <p><em>King's College London</em></p>
     </div>
-    <div>
+    <div class="mt-3 mt-md-0">
       <img src="images/diana.png" style="max-width: 100px; height: auto;" alt="Dr Diana Shamsutdinova">
     </div>
   </div>
 
-  <div class="card mb-4 p-3 d-flex flex-row align-items-center justify-content-between" style="max-width: 1000px;">
-    <div>
+  <div class="card mb-4 p-3 d-flex flex-column flex-md-row align-items-center justify-content-between team-card" style="max-width: 1000px;">
+    <div class="text-center text-md-start">
       <h4 class="mb-1"><a href="https://www.kcl.ac.uk/people/daniel-stahl">Prof Daniel Stahl</a></h4>
       <p class="mb-0">Co-applicant</p>
-      <p><em>King’s College London</em></p>
+      <p><em>King's College London</em></p>
     </div>
-    <div>
+    <div class="mt-3 mt-md-0">
       <img src="images/daniel.png" style="max-width: 100px; height: auto;" alt="Prof Daniel Stahl">
     </div>
   </div>
 
-  <div class="card mb-4 p-3 d-flex flex-row align-items-center justify-content-between" style="max-width: 1000px;">
-    <div>
-      <h4 class="mb-1"><a href="https://flxzimmer.github.io//">Dr Felix Zimmer</a></h4>
+  <div class="card mb-4 p-3 d-flex flex-column flex-md-row align-items-center justify-content-between team-card" style="max-width: 1000px;">
+    <div class="text-center text-md-start">
+      <h4 class="mb-1"><a href="https://flxzimmer.github.io/">Dr Felix Zimmer</a></h4>
       <p class="mb-0">Co-applicant</p>
       <p><em>Independent Researcher</em></p>
     </div>
-    <div>
+    <div class="mt-3 mt-md-0">
       <img src="images/felix.png" style="max-width: 100px; height: auto;" alt="Dr Felix Zimmer">
     </div>
   </div>
@@ -117,7 +117,7 @@ page-layout: full
     </div>
     <div class="mt-3 mt-md-0 ps-md-3" style="flex: 1;">
       <p class="mb-2">
-        Department of Biostatistics & Health Informatics, King’s College London, London, UK.
+        Department of Biostatistics & Health Informatics, King's College London, London, UK.
       </p>
     </div>
   </div>

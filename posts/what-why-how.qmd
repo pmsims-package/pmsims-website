@@ -1,0 +1,54 @@
+---
+title: "The pmsims package: What, Why and How?"
+author: Sarah Markham
+author_image: /images/sarah.png
+image: ../images/shanty.png
+date: 2026-02-05
+description: "In this post, our PPI lead, Sarah, introduces the concept of sample size and how pmsims helps us choose a data size that performs reliably in practice."
+---
+
+::: {.blog-post-byline}
+![]({{< meta author_image >}}){.blog-author-avatar}
+
+::: {.blog-author-text}
+Written by {{< meta author >}}
+:::
+:::
+
+::: {.blog-feature-wrap}
+![](../images/shanty.png){.blog-feature-image}
+:::
+
+When we build a prediction model, say, to forecast someone’s risk of developing
+psychosis, we are like a captain preparing for a long voyage. We need a sturdy
+vessel, but we also need to know how many sailors to bring along. In prediction
+modelling terms, those sailors are our data, and the question becomes: *How much
+data (sailors) is enough to navigate the unknown waters of new, unseen cases
+(individual people who may be at risk of developing psychosis)?*
+
+This is not a simple question. Even if we set sail with what looks like the same
+number of crew members, two voyages can unfold quite differently. Likewise, two
+sets of data of the same size can produce prediction models of very different
+strengths. Some models glide smoothly; others falter, not because they are
+flawed, but because the winds of chance push them along different paths.
+
+pmsims is a tool built to guide us through this uncertainty. Instead of relying
+on overly simplistic rules or old sailors’ tales, it repeatedly draws new crews
+from an assumed world and launches the same boat design again and again,
+observing how often the voyage goes well. From each of these assumed worlds,
+pmsims creates a predictive model, watching how it grows stronger as the “crew
+size” (the size of the dataset) becomes larger.
+
+What sets pmsims apart is not just the number of worlds it imagines, but the way
+it listens to them. It does not only ask, *“How good is the average model?”*
+Instead, it asks something more practical, more human:
+
+> “If we set sail with this number of sailors (amount of data), how often will
+> the journey go well?”
+
+In other words, it looks for predictive models that perform well most of the
+time, for example, in eight out of ten voyages, rather than just on average. By
+charting these imagined journeys, pmsims finds the size of a set of data that
+gives us confidence---confidence that when we build a predictive model in the
+real world, it will not just be strong in theory, but steady in practice, across
+the shifting tides of chance.

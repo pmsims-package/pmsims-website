@@ -1,0 +1,41 @@
+---
+title: "News"
+format:
+  html:
+    body-classes: news-page
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  fields: [image, title, description, date, author, author_image]
+  categories: false
+---
+
+```{=html}
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const posts = document.querySelectorAll("#listing-listing .quarto-post");
+  posts.forEach((post) => {
+    const author = post.querySelector(".listing-author");
+    const authorImageMeta = post.querySelector(".listing-author_image");
+    if (!author || !authorImageMeta) return;
+
+    const imagePath = authorImageMeta.textContent.trim();
+    if (!imagePath) return;
+
+    const wrap = document.createElement("div");
+    wrap.className = "listing-author-wrap";
+
+    const img = document.createElement("img");
+    img.className = "listing-author-avatar";
+    img.src = imagePath;
+    img.alt = "Photo of " + author.textContent.trim();
+
+    author.parentNode.insertBefore(wrap, author);
+    wrap.appendChild(img);
+    wrap.appendChild(author);
+    authorImageMeta.remove();
+  });
+});
+</script>
+```

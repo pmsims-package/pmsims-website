@@ -1,0 +1,31 @@
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const navbar = document.querySelector("#quarto-header .navbar .navbar-container");
+  if (!navbar || navbar.querySelector(".nav-link.news-standalone")) return;
+
+  const toggler = navbar.querySelector(".navbar-toggler");
+  const collapsedNewsLink = navbar.querySelector(
+    "#navbarCollapse .nav-link[href$='news.html']"
+  );
+
+  if (!toggler || !collapsedNewsLink) return;
+
+  const standaloneNewsLink = collapsedNewsLink.cloneNode(true);
+  standaloneNewsLink.classList.add("news-standalone");
+  standaloneNewsLink.removeAttribute("aria-current");
+  standaloneNewsLink.classList.remove("active");
+
+  const newsPath = new URL(
+    standaloneNewsLink.getAttribute("href"),
+    window.location.href
+  ).pathname.replace(/\/+$/, "");
+  const currentPath = window.location.pathname.replace(/\/+$/, "");
+
+  if (currentPath === newsPath) {
+    standaloneNewsLink.classList.add("active");
+    standaloneNewsLink.setAttribute("aria-current", "page");
+  }
+
+  navbar.insertBefore(standaloneNewsLink, toggler);
+});
+</script>

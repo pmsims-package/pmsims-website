@@ -6,7 +6,7 @@ website:
   title: "Home"
   navbar:
     search: false
-    collapse: false
+    collapse: true
     background: primary
     pinned: true
     left:
@@ -16,6 +16,8 @@ website:
         text: Team
       - href: index.qmd#contact
         text: Contact
+      - href: news.qmd
+        text: News
 
 format:
   html:
@@ -23,6 +25,7 @@ format:
       - cosmo
       - brand
     css: styles.css
+    include-after-body: templates/navbar-mobile-news.html
     toc: true
     markdown:
       extensions: [fenced-divs]

@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.26">
+<meta name="generator" content="quarto-1.8.27">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>tool – Home</title>
+<title>Home</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -36,9 +36,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-4d9afe2b8d18ee9fa5d0d57b5ed4214d.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-0972c629e1b492d1686b9f9ff7e8c28f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
@@ -74,20 +74,25 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="index.css">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand " data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Home</span>
     </a>
   </div>
-          <ul class="navbar-nav navbar-nav-scroll me-auto">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link" href="./index.html#about"> 
 <span class="menu-text">About</span></a>
@@ -100,8 +105,13 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="./index.html#contact"> 
 <span class="menu-text">Contact</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./news.html"> 
+<span class="menu-text">News</span></a>
+  </li>  
 </ul>
-          <div class="quarto-navbar-tools">
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -110,184 +120,126 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
-    </div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
 
-<div class="{=html}">
-<style>
-  #sample-controls {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 1.5rem;
-    font-family: Lato, sans-serif;
-  }
-  #sample-controls label {
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-  }
-  #sampleSize {
-    width: 80%;
-    max-width: 500px;
-  }
-</style>
-<div id="sample-controls">
-<p><label for="sampleSize"> Sample size: <span id="sampleSizeValue">100</span> </label> <input type="range" id="sampleSize" min="100" max="5000" step="100" value="100"></p>
+<section class="hero">
+  <div class="hero-text">
+    <p class="hero-tag">Sample Size for Prediction Models</p>
+    <h1>pmsims</h1>
+    <p class="hero-subtitle">Estimate minimum sample sizes for prediction and machine learning models.</p>
+  </div>
+  <div class="hero-media">
+    <img src="images/banner.png" alt="Abstract data banner" class="hero-img">
+  </div>
+</section>
+<p>We’re creating a free, easy-to-use tool to help researchers calculate how much data they need to build accurate and reliable prediction models using machine learning and long-term health records. Developed in partnership with patients, carers, and charities, the tool will support safer, fairer, and more effective use of data in healthcare.</p>
+<p>Prediction models are already helping the NHS personalise care, plan treatments, and prevent illness before it starts. But many are built on too little data, leading to inaccurate results—especially for underrepresented groups. Our project addresses this problem by providing practical guidance on the data needed to develop models that are both powerful and fair.</p>
+<p>This project is led by a team at <a href="">King’s College London</a> and funded by the <a href="">National Institute for Health and Care Research</a> as part of the Research for Patient Benefit Programme. To learn more, <a href="#about">see below</a>.</p>
+<div class="logo-strip">
+  <div class="logo-item logo-item--spaced">
+    <img src="images/nihr.png" alt="NIHR logo" class="logo-img">
+  </div>
+  <div class="logo-item">
+    <img src="images/kcl.png" alt="King's College London logo" class="logo-img">
+  </div>
 </div>
-<canvas id="predictionChart" width="700" height="270">
-</canvas>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@1.4.0"></script>
-<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&amp;display=swap" rel="stylesheet">
+<div id="about" class="banner-container banner-container--spaced">
+  <img src="images/prediction-placeholder.png" alt="Banner" class="banner-img">
+</div>
+<section id="what-is-the-pmsims-project-about" class="level1">
+<h1>What is the ‘pmsims’ project about?</h1>
+<ul>
+<li><p>NHS services use prediction tools to <span class="hl">help make decisions about patient care.</span> These tools rely on data to estimate what might happen in the future, like someone’s risk of developing a health condition.</p></li>
+<li><p>However, if the tools are built using too little data, their predictions can be <span class="hl">inaccurate or unfair</span>, particularly for people from underrepresented communities.</p></li>
+<li><p>We’re building a free, easy-to-use tool to help researchers estimate <span class="hl">how much data they need</span> to build accurate and fair prediction models—including newer approaches that use complex methods like machine learning.</p></li>
+<li><p>We’re working with patients and the public to understand their views, ensure accessibility, and raise awareness of the risks associated with using too little information. Our goal is to improve the fairness and accuracy of prediction tools used in healthcare.</p></li>
+</ul>
+</section>
+<section id="how-do-prediction-models-work" class="level1">
+<h1>How do prediction models work?</h1>
+<ul>
+<li><p>Prediction modelling uses <span class="hl">statistics or computer algorithms</span> to estimate what might happen in the future. More and more of these models are being created as larger datasets and better tools become available.</p></li>
+<li><p>For example, the <a href="https://www.qrisk.org/">QRISK</a> tool estimates a person’s risk of developing heart disease in the next 10 years. Doctors use it to decide who should be offered treatment to help prevent heart problems.</p></li>
+</ul>
+</section>
+<section id="why-sample-size-matters-in-prediction" class="level1">
+<h1>Why sample size matters in prediction</h1>
+<ul>
+<li><p>Many prediction models are developed using <span class="hl">too little data</span>. When this happens, the model can become too focused on the specific details of the sample it was trained on, rather than learning general patterns that apply more widely. This is known as <span class="hl">overfitting</span>. It means the model might appear accurate during development but make unreliable or unfair predictions in real-world settings.</p></li>
+<li><p>Small samples are especially problematic when making predictions for minoritised groups, as limited representation can lead to inaccurate and unfair predictions, potentially resulting in incorrect or even harmful treatment recommendations.</p></li>
+</ul>
+<div class="info-card">
+  <h2 class="anchored" data-anchor-id="why-sample-size-matters-in-prediction">How will this project help?</h2>
+  <p>An essential first step in building a model is estimating how much data is needed.</p>
+  <ul class="info-card-list">
+    <li>We’re creating <span class="hl">a simple, user-friendly tool</span> that estimates the minimum amount of data needed for different types of prediction models. It does this by generating synthetic (artificial) data of different sizes and testing how well models perform with each one.</li>
+    <li>This will help researchers decide how complex their model should be and help <span class="hl">prevent models being developed without enough data</span>, which can lead to inaccurate or unfair predictions and wasted research effort.</li>
+  </ul>
+</div>
+<div class="contact-box" id="contact">
+<h2 class="anchored">Get in touch</h2>
+  <p>We’re always keen to hear from you. Whether you have questions about the project, want to learn more, or are interested in collaborating—feel free to get in touch.</p>
+
+  <button onclick="window.location.href='mailto:pmsims@kcl.ac.uk'">Contact us</button>
+  </div>
+
+<div class="contact-box contact-box-compact">
+  <h2 class="anchored">Join our mailing list</h2>
+  <p>If you’re interested in how prediction models work, why data size matters, or how this tool could support better, fairer research, you can sign up for occasional updates.</p>
+
+  <button onclick="subscribeToMailingList()">Join mailing list</button>
+
+  <p class="contact-box-note">You’ll receive no more than four emails per year, and you can unsubscribe at any time with a single click.</p>
+</div>
+
 <script>
-  const ctx = document.getElementById('predictionChart').getContext('2d');
-  const sampleSizeSlider = document.getElementById('sampleSize');
-  const sampleSizeValue = document.getElementById('sampleSizeValue');
-  const trueProbability = 0.6;
-
-  function simulatePredictions(n, mean = trueProbability) {
-    const std = 0.3 * Math.exp(-n / 1000);
-    return Array.from({ length: 50 }, () => {
-      let val = mean + randn_bm() * std;
-      return Math.min(1, Math.max(0, val));
-    });
+  function subscribeToMailingList() {
+    const subject = encodeURIComponent("I'd like to join the pmsims mailing list");
+    const body = encodeURIComponent("Please add me to the mailing list.");
+    window.location.href = `mailto:pmsims@kcl.ac.uk?subject=${subject}&body=${body}`;
   }
-
-  function randn_bm() {
-    let u = 0, v = 0;
-    while (u === 0) u = Math.random();
-    while (v === 0) v = Math.random();
-    return Math.sqrt(-2.0 * Math.log(u)) * Math.cos(2.0 * Math.PI * v);
-  }
-
-  function stabilityComment(n) {
-    if (n <= 500) {
-      return "Low sample size produces highly unstable predictions — unreliable for individual prediction.";
-    } else if (n <= 2000) {
-      return "Moderate sample size — predictions are more stable but still variable.";
-    } else {
-      return "High sample size — predictions are stable and consistent.";
-    }
-  }
-
-  const chart = new Chart(ctx, {
-    type: 'scatter',
-    data: {
-      datasets: [{
-        data: [],
-        pointRadius: 4,
-        backgroundColor: 'rgba(0, 123, 255, 0.7)',
-      }]
-    },
-    options: {
-      animation: false,
-      plugins: {
-        tooltip: { enabled: false },
-        legend: { display: false },
-        annotation: {
-          annotations: {
-            trueLine: {
-              type: 'line',
-              xMin: trueProbability,
-              xMax: trueProbability,
-              borderColor: 'rgba(200, 0, 0, 0.8)',
-              borderWidth: 2
-            },
-            trueLabel: {
-              type: 'label',
-              xValue: trueProbability,
-              yValue: 0.35,
-              backgroundColor: 'rgba(200, 0, 0, 0.8)',
-              content: '0.6',
-              color: 'white',
-              font: {
-                size: 16,
-                family: 'Lato'
-              },
-              textAlign: 'center',
-              enabled: true
-            },
-            comment: {
-              type: 'label',
-              xValue: 0.5,
-              yValue: 0.9,
-              backgroundColor: 'rgba(245, 250, 255, 0.98)',
-              borderColor: 'rgba(0, 0, 0, 0.1)',
-              borderWidth: 1,
-              margin: 15,
-              padding: 10,
-              cornerRadius: 6,
-              font: {
-                size: 18,
-                family: 'Lato',
-                weight: 'normal'
-              },
-              content: stabilityComment(100),
-              position: 'center',
-              textAlign: 'center',
-              display: true
-            }
-          }
-        }
-      },
-      scales: {
-        x: {
-          min: 0,
-          max: 1,
-          title: {
-            display: true,
-            text: 'Predicted Probability',
-            font: {
-              size: 16,
-              family: 'Lato'
-            }
-          },
-          ticks: {
-            font: {
-              size: 16,
-              family: 'Lato'
-            }
-          }
-        },
-        y: {
-          min: 0,
-          max: 1,
-          display: false
-        }
-      }
-    },
-    plugins: [Chart.registry.getPlugin('annotation')]
-  });
-
-  function updateChart(n) {
-    const data = simulatePredictions(n).map(x => ({
-      x: x,
-      y: 0.5 + (Math.random() - 0.5) * 0.05
-    }));
-    chart.data.datasets[0].data = data;
-    chart.options.plugins.annotation.annotations.comment.content = stabilityComment(n);
-    chart.update();
-  }
-
-  updateChart(100);
-
-  sampleSizeSlider.addEventListener('input', () => {
-    const n = parseInt(sampleSizeSlider.value);
-    sampleSizeValue.textContent = n;
-    updateChart(n);
-  });
 </script>
-</div>
 
 
+</section>
 
 </main> <!-- /main -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const navbar = document.querySelector("#quarto-header .navbar .navbar-container");
+  if (!navbar || navbar.querySelector(".nav-link.news-standalone")) return;
+
+  const toggler = navbar.querySelector(".navbar-toggler");
+  const collapsedNewsLink = navbar.querySelector(
+    "#navbarCollapse .nav-link[href$='news.html']"
+  );
+
+  if (!toggler || !collapsedNewsLink) return;
+
+  const standaloneNewsLink = collapsedNewsLink.cloneNode(true);
+  standaloneNewsLink.classList.add("news-standalone");
+  standaloneNewsLink.removeAttribute("aria-current");
+  standaloneNewsLink.classList.remove("active");
+
+  const newsPath = new URL(
+    standaloneNewsLink.getAttribute("href"),
+    window.location.href
+  ).pathname.replace(/\/+$/, "");
+  const currentPath = window.location.pathname.replace(/\/+$/, "");
+
+  if (currentPath === newsPath) {
+    standaloneNewsLink.classList.add("active");
+    standaloneNewsLink.setAttribute("aria-current", "page");
+  }
+
+  navbar.insertBefore(standaloneNewsLink, toggler);
+});
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

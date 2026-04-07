@@ -15,6 +15,11 @@ listing:
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   const posts = document.querySelectorAll("#listing-listing .quarto-post");
+  const offset =
+    document.querySelector('meta[name="quarto:offset"]')?.getAttribute("content") ??
+    "./";
+  const baseUrl = new URL(offset, window.location.href);
+
   posts.forEach((post) => {
     const author = post.querySelector(".listing-author");
     const authorImageMeta = post.querySelector(".listing-author_image");
@@ -22,13 +27,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const imagePath = authorImageMeta.textContent.trim();
     if (!imagePath) return;
+    const resolvedImagePath = /^(?:[a-z]+:)?\/\//i.test(imagePath)
+      ? imagePath
+      : new URL(imagePath.replace(/^\/+/, ""), baseUrl).toString();
 
     const wrap = document.createElement("div");
     wrap.className = "listing-author-wrap";
 
     const img = document.createElement("img");
     img.className = "listing-author-avatar";
-    img.src = imagePath;
+    img.src = resolvedImagePath;
     img.alt = "Photo of " + author.textContent.trim();
 
     author.parentNode.insertBefore(wrap, author);

@@ -25,7 +25,6 @@ format:
       - cosmo
       - brand
     css: styles.css
-    include-after-body: templates/navbar-mobile-news.html
     toc: true
     markdown:
       extensions: [fenced-divs]

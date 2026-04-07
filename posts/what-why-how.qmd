@@ -17,6 +17,7 @@ Written by {{< meta author >}}
 :::
 :::
 
+::: {.blog-feature-flow}
 ::: {.blog-feature-wrap}
 ![](../images/shanty.png){.blog-feature-image}
 :::
@@ -44,6 +45,7 @@ size” (the size of the dataset) becomes larger.
 What sets pmsims apart is not just the number of worlds it imagines, but the way
 it listens to them. It does not only ask, *“How good is the average model?”*
 Instead, it asks something more practical, more human:
+:::
 
 > “If we set sail with this number of sailors (amount of data), how often will
 > the journey go well?”

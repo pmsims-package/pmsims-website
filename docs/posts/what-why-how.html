@@ -10,7 +10,7 @@
 <meta name="dcterms.date" content="2026-02-05">
 <meta name="description" content="In this post, our PPI lead, Sarah, introduces the concept of sample size and how pmsims helps us choose a data size that performs reliably in practice.">
 
-<title>The pmsims package: What, Why and How? – Home</title>
+<title>The pmsims package: What, Why and How? – pmsims</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -89,7 +89,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">Home</span>
+    <span class="navbar-title">pmsims</span>
     </a>
   </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
@@ -114,8 +114,15 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">News</span></a>
   </li>  
 </ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="https://pmsims-package.github.io/pmsims/"> 
+<span class="menu-text">R package</span></a>
+  </li>  
+</ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
+    <a href="https://github.com/pmsims-package/pmsims" title="GitHub" class="quarto-navigation-tool px-1" aria-label="GitHub"><i class="bi bi-github"></i></a>
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -173,6 +180,7 @@ ul.task-list li input[type="checkbox"] {
 <p>Written by Sarah Markham</p>
 </div>
 </div>
+<div class="blog-feature-flow">
 <div class="blog-feature-wrap">
 <p><img src="../images/shanty.png" class="blog-feature-image img-fluid"></p>
 </div>
@@ -180,6 +188,7 @@ ul.task-list li input[type="checkbox"] {
 <p>This is not a simple question. Even if we set sail with what looks like the same number of crew members, two voyages can unfold quite differently. Likewise, two sets of data of the same size can produce prediction models of very different strengths. Some models glide smoothly; others falter, not because they are flawed, but because the winds of chance push them along different paths.</p>
 <p>pmsims is a tool built to guide us through this uncertainty. Instead of relying on overly simplistic rules or old sailors’ tales, it repeatedly draws new crews from an assumed world and launches the same boat design again and again, observing how often the voyage goes well. From each of these assumed worlds, pmsims creates a predictive model, watching how it grows stronger as the “crew size” (the size of the dataset) becomes larger.</p>
 <p>What sets pmsims apart is not just the number of worlds it imagines, but the way it listens to them. It does not only ask, <em>“How good is the average model?”</em> Instead, it asks something more practical, more human:</p>
+</div>
 <blockquote class="blockquote">
 <p>“If we set sail with this number of sailors (amount of data), how often will the journey go well?”</p>
 </blockquote>

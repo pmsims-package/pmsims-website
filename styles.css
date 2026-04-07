@@ -251,63 +251,208 @@ body.team-page #advisory-group .card .d-flex h4 {
   margin-bottom: 1rem;
 }
 
-/* Emphasize News as a callout item in the main navbar */
+/* Keep the main section nav understated; reserve stronger treatments for actions */
 .navbar .navbar-nav {
   align-items: center;
 }
 
-.navbar-nav .nav-link[href$="news.html"] {
-  background-color: #e6eef6;
-  color: #073e66;
-  font-weight: 700;
-  border: 1px solid #c4d5e6;
-  border-radius: 0.6rem;
-  padding: 0.3rem 0.8rem;
-  margin-left: 0.25rem;
-  margin-top: 0;
-  margin-bottom: 0;
+.navbar #navbarCollapse > .navbar-nav:not(.ms-auto) .nav-link {
+  position: relative;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  transition: color 0.2s ease;
+}
+
+.navbar #navbarCollapse > .navbar-nav:not(.ms-auto) .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0.8rem;
+  right: 0.8rem;
+  bottom: 0.2rem;
+  height: 2px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  opacity: 0;
+  transform: scaleX(0.35);
+  transform-origin: center;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.navbar #navbarCollapse > .navbar-nav:not(.ms-auto) .nav-link:hover,
+.navbar #navbarCollapse > .navbar-nav:not(.ms-auto) .nav-link:focus,
+.navbar #navbarCollapse > .navbar-nav:not(.ms-auto) .nav-link.active {
+  color: #ffffff;
+}
+
+.navbar #navbarCollapse > .navbar-nav:not(.ms-auto) .nav-link:hover::after,
+.navbar #navbarCollapse > .navbar-nav:not(.ms-auto) .nav-link:focus::after,
+.navbar #navbarCollapse > .navbar-nav:not(.ms-auto) .nav-link.active::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.navbar .navbar-nav.ms-auto .nav-link {
   line-height: inherit;
   display: inline-flex;
   align-items: center;
   position: relative;
   overflow: hidden;
   transform: translateZ(0);
-  transition: background-color 0.2s ease, border-color 0.2s ease,
-    box-shadow 0.2s ease, transform 0.2s ease;
 }
 
-.navbar-nav .nav-link[href$="news.html"]::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    120deg,
-    rgba(255, 255, 255, 0) 25%,
-    rgba(255, 255, 255, 0.4) 50%,
-    rgba(255, 255, 255, 0) 75%
-  );
-  transform: translateX(-140%);
-  transition: transform 0.5s ease;
-  pointer-events: none;
+.navbar .navbar-nav.ms-auto {
+  align-items: center;
 }
 
-.navbar-nav .nav-link[href$="news.html"]:hover,
-.navbar-nav .nav-link[href$="news.html"]:focus,
-.navbar-nav .nav-link[href$="news.html"].active {
-  background-color: #dbe8f4;
-  border-color: #a8c0d8;
-  color: #052f50;
-  box-shadow: 0 0 0 0.15rem rgba(7, 62, 102, 0.1);
+.navbar .navbar-nav.ms-auto .nav-link[href="https://pmsims-package.github.io/pmsims/"] {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.42rem 0.95rem;
+  margin-left: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 999px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.08));
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  box-shadow: 0 10px 24px rgba(3, 26, 43, 0.14);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease,
+    border-color 0.2s ease;
 }
 
-.navbar-nav .nav-link[href$="news.html"]:hover,
-.navbar-nav .nav-link[href$="news.html"]:focus {
+.navbar .navbar-nav.ms-auto .nav-link[href="https://pmsims-package.github.io/pmsims/"]::before {
+  content: "R";
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.55rem;
+  height: 1.55rem;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #073e66;
+  font-size: 0.9rem;
+  font-weight: 800;
+  line-height: 1;
+  box-shadow: inset 0 0 0 1px rgba(7, 62, 102, 0.08);
+}
+
+.navbar .navbar-nav.ms-auto .nav-link[href="https://pmsims-package.github.io/pmsims/"]:hover,
+.navbar .navbar-nav.ms-auto .nav-link[href="https://pmsims-package.github.io/pmsims/"]:focus,
+.navbar .navbar-nav.ms-auto .nav-link[href="https://pmsims-package.github.io/pmsims/"].active {
   transform: translateY(-1px);
+  border-color: rgba(255, 255, 255, 0.45);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0.12));
+  box-shadow: 0 14px 28px rgba(3, 26, 43, 0.2);
+  color: #ffffff;
 }
 
-.navbar-nav .nav-link[href$="news.html"]:hover::after,
-.navbar-nav .nav-link[href$="news.html"]:focus::after {
-  transform: translateX(140%);
+.navbar .quarto-navbar-tools {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-left: 0.6rem;
+}
+
+.navbar .quarto-navbar-tools .quarto-navigation-tool[href="https://github.com/pmsims-package/pmsims"] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.35rem;
+  height: 2.35rem;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.26);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  box-shadow: 0 8px 18px rgba(3, 26, 43, 0.14);
+  transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.navbar .quarto-navbar-tools .quarto-navigation-tool[href="https://github.com/pmsims-package/pmsims"]:hover,
+.navbar .quarto-navbar-tools .quarto-navigation-tool[href="https://github.com/pmsims-package/pmsims"]:focus {
+  transform: translateY(-1px);
+  border-color: rgba(255, 255, 255, 0.42);
+  background: rgba(255, 255, 255, 0.16);
+  color: #ffffff;
+  box-shadow: 0 12px 22px rgba(3, 26, 43, 0.18);
+}
+
+@media (max-width: 991.98px) {
+  .navbar .navbar-container {
+    display: grid;
+    grid-template-columns: 3.75rem minmax(0, 1fr) 3.75rem;
+    align-items: center;
+    column-gap: 0.5rem;
+  }
+
+  .navbar .navbar-brand-container {
+    grid-column: 2;
+    justify-self: center;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .navbar .navbar-toggler {
+    grid-column: 1;
+    justify-self: start;
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .navbar .quarto-navbar-tools {
+    grid-column: 3;
+    justify-self: end;
+    width: 3.75rem;
+    justify-content: flex-end;
+  }
+
+  .navbar .navbar-brand {
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+    display: inline-flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .navbar .navbar-collapse {
+    grid-column: 1 / -1;
+  }
+
+  .navbar #navbarCollapse > .navbar-nav:not(.ms-auto) .nav-link {
+    width: fit-content;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .navbar #navbarCollapse > .navbar-nav:not(.ms-auto) .nav-link::after {
+    left: 0;
+    right: 0;
+  }
+
+  .navbar .navbar-nav.ms-auto .nav-link[href="https://pmsims-package.github.io/pmsims/"] {
+    margin-left: 0;
+    margin-top: 0.5rem;
+    width: fit-content;
+  }
+
+  .navbar .quarto-navbar-tools {
+    margin-left: 0;
+    margin-top: 0;
+  }
+
+  .navbar .navbar-brand-container,
+  .navbar .quarto-navbar-tools {
+    display: flex;
+    align-items: center;
+  }
 }
 
 body.news-page #quarto-content {
@@ -326,6 +471,10 @@ body.news-page #quarto-document-content {
   max-width: min(1120px, 96vw);
   margin-left: auto;
   margin-right: auto;
+}
+
+body.news-page #title-block-header {
+  text-align: center;
 }
 
 body.news-page #listing-listing {
@@ -590,6 +739,12 @@ body.blog-post-page #title-block-header .description {
   justify-content: center;
 }
 
+.blog-feature-flow::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
 body.blog-post-page #quarto-document-content > p {
   max-width: 72ch;
   margin-left: auto;
@@ -615,14 +770,71 @@ body.blog-post-page #quarto-document-content blockquote p {
   color: #294961;
 }
 
+@media (min-width: 980px) {
+  body.blog-post-page .blog-feature-flow {
+    display: block;
+  }
+
+  body.blog-post-page .blog-feature-flow .blog-feature-wrap {
+    float: right;
+    width: min(46%, 430px);
+    margin: 0.1rem 0 0.9rem 1.5rem;
+  }
+
+  body.blog-post-page .blog-feature-flow .blog-feature-wrap > p {
+    width: 100%;
+    display: block;
+  }
+
+  body.blog-post-page .blog-feature-flow .blog-feature-image {
+    width: 100%;
+    margin: 0;
+  }
+
+  body.blog-post-page .blog-feature-flow > p {
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  body.blog-post-page #quarto-document-content > p,
+  body.blog-post-page #quarto-document-content > blockquote {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  body.blog-post-page #quarto-document-content > p {
+    max-width: min(46rem, 100%);
+  }
+
+  body.blog-post-page #quarto-document-content > blockquote {
+    max-width: min(46rem, 100%);
+  }
+
+  body.blog-post-page #quarto-document-content > blockquote + p {
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
 @media (max-width: 900px) {
+  body.news-page #quarto-content {
+    padding-left: 0.6rem;
+    padding-right: 0.6rem;
+  }
+
+  body.news-page #quarto-document-content {
+    max-width: 100%;
+  }
+
   body.news-page #listing-listing .quarto-post {
     grid-template-columns: 1fr;
     grid-template-areas:
       "thumb"
       "body"
       "meta";
-    padding: 0.9rem;
+    padding: 1.05rem 1.1rem 1.15rem;
   }
 
   body.news-page #listing-listing .thumbnail-image {
@@ -642,6 +854,30 @@ body.blog-post-page #quarto-document-content blockquote p {
 }
 
 @media (max-width: 700px) {
+  body.news-page #quarto-document-content {
+    padding-left: 0.1rem;
+    padding-right: 0.1rem;
+  }
+
+  body.news-page #title-block-header {
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+    margin-bottom: 1.1rem;
+  }
+
+  body.news-page #listing-listing {
+    max-width: 100%;
+  }
+
+  body.news-page #listing-listing .list {
+    gap: 1.1rem;
+  }
+
+  body.news-page #listing-listing .quarto-post {
+    padding: 1.15rem 1.15rem 1.2rem;
+    border-radius: 1rem;
+  }
+
   .blog-post-byline {
     padding: 0.7rem 0.8rem;
   }

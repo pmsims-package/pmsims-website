@@ -1,12 +1,12 @@
 project:
   type: website
-  output-dir: _site
+  output-dir: docs
 
 website:
-  title: "Home"
+  title: "pmsims"
   navbar:
     search: false
-    collapse: false
+    collapse: true
     background: primary
     pinned: true
     left:
@@ -16,6 +16,15 @@ website:
         text: Team
       - href: index.qmd#contact
         text: Contact
+      - href: news.qmd
+        text: News
+    right:
+      - href: https://pmsims-package.github.io/pmsims/
+        text: R package
+    tools:
+      - icon: github
+        href: https://github.com/pmsims-package/pmsims
+        text: GitHub
 
 format:
   html:

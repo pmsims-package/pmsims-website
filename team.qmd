@@ -1,6 +1,8 @@
 ---
 title: "Our Team"
-format: html
+format:
+  html:
+    body-classes: team-page
 page-layout: full
 ---
 
@@ -129,14 +131,8 @@ page-layout: full
       <h4 class="mb-0">Dr Joie Ensor</h4>
     </div>
     <div class="mt-3 mt-md-0 ps-md-3" style="flex: 1;">
-      <p class="mb-2">
-        Department of Applied Health Sciences, School of Health Sciences,
-        College of Medicine and Health, University of Birmingham, Birmingham,
-        UK.
-      </p>
-      <p class="mb-0">
-        NIHR Birmingham Biomedical Research Centre, UK.
-      </p>
+      <p class="mb-2">Department of Applied Health Sciences, School of Health Sciences, College of Medicine and Health, University of Birmingham, Birmingham, UK.</p>
+      <p class="mb-0">NIHR Birmingham Biomedical Research Centre, UK.</p>
     </div>
   </div>
 </div>

@@ -2,20 +2,26 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.36">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Ewan Carr">
+<meta name="dcterms.date" content="2026-09-01">
+<meta name="description" content="Two new papers from the project: one about why estimating minimum sample sizes is difficult, and one testing how well pmsims does it.">
 
-<title>About – pmsims</title>
+<title>Two new papers on sample size for prediction models – pmsims</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -26,26 +32,26 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-f418161beb48e0141c760e455f12af2c.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-d95d5472af9f64f6da3be8c2bc4bcdd9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-7103cd3dfbb4b7bfee00bacdb3d0511d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-d95d5472af9f64f6da3be8c2bc4bcdd9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-66675254a7b4530c372829d5e56838aa.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-60bccc86023b5e0dc07ed6163c4bc6ed.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-66675254a7b4530c372829d5e56838aa.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -75,17 +81,17 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed blog-post-page quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">pmsims</span>
     </a>
   </div>
@@ -95,19 +101,19 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html#about"> 
+    <a class="nav-link" href="../index.html#about"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./team.html"> 
+    <a class="nav-link" href="../team.html"> 
 <span class="menu-text">Team</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./index.html#contact"> 
+    <a class="nav-link" href="../index.html#contact"> 
 <span class="menu-text">Contact</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./news.html"> 
+    <a class="nav-link" href="../news.html"> 
 <span class="menu-text">News</span></a>
   </li>  
 </ul>
@@ -133,10 +139,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#what-is-the-pmsims-project-about" id="toc-what-is-the-pmsims-project-about" class="nav-link active" data-scroll-target="#what-is-the-pmsims-project-about">What is the ‘pmsims’ project about?</a></li>
-  <li><a href="#how-do-prediction-models-work" id="toc-how-do-prediction-models-work" class="nav-link" data-scroll-target="#how-do-prediction-models-work">How do prediction models work?</a></li>
-  <li><a href="#why-sample-size-matters-in-prediction" id="toc-why-sample-size-matters-in-prediction" class="nav-link" data-scroll-target="#why-sample-size-matters-in-prediction">Why sample size matters in prediction</a></li>
-  <li><a href="#how-will-this-project-help" id="toc-how-will-this-project-help" class="nav-link" data-scroll-target="#how-will-this-project-help">How will this project help?</a></li>
+  <li><a href="#paper-1-what-counts-as-enough-data" id="toc-paper-1-what-counts-as-enough-data" class="nav-link active" data-scroll-target="#paper-1-what-counts-as-enough-data">Paper 1: what counts as enough data</a></li>
+  <li><a href="#paper-2-testing-the-package" id="toc-paper-2-testing-the-package" class="nav-link" data-scroll-target="#paper-2-testing-the-package">Paper 2: testing the package</a></li>
+  <li><a href="#the-package" id="toc-the-package" class="nav-link" data-scroll-target="#the-package">The package</a></li>
   </ul>
 </nav>
     </div>
@@ -145,14 +150,31 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">About</h1>
+<h1 class="title">Two new papers on sample size for prediction models</h1>
 </div>
 
+<div>
+  <div class="description">
+    Two new papers from the project: one about why estimating minimum sample sizes is difficult, and one testing how well pmsims does it.
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Ewan Carr </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">September 1, 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -162,200 +184,44 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>This page provides a short overview of the project, why sample size matters, and how prediction models are used in practice.</p>
-<section id="what-is-the-pmsims-project-about" class="level1">
-<h1>What is the ‘pmsims’ project about?</h1>
-<ul>
-<li><p>NHS services use prediction tools to <span class="hl">help make decisions about patient care.</span> These tools rely on data to estimate what might happen in the future, like someone’s risk of developing a health condition.</p></li>
-<li><p>However, if the tools are built using too little data, their predictions can be <span class="hl">inaccurate or unfair</span>, particularly for people from underrepresented communities.</p></li>
-<li><p>We’re building a free, easy-to-use tool to help researchers estimate <span class="hl">how much data they need</span> to build accurate and fair prediction models—including newer approaches that use complex methods like machine learning.</p></li>
-<li><p>We’re working with patients and the public to understand their views, ensure accessibility, and raise awareness of the risks associated with using too little information. Our goal is to improve the fairness and accuracy of prediction tools used in healthcare.</p></li>
-</ul>
-</section>
-<section id="how-do-prediction-models-work" class="level1">
-<h1>How do prediction models work?</h1>
-<ul>
-<li><p>Prediction modelling uses <span class="hl">statistics or computer algorithms</span> to estimate what might happen in the future. More and more of these models are being created as larger datasets and better tools become available.</p></li>
-<li><p>For example, the <a href="https://www.qrisk.org/">QRISK</a> tool estimates a person’s risk of developing heart disease in the next 10 years. Doctors use it to decide who should be offered treatment to help prevent heart problems.</p></li>
-</ul>
-</section>
-<section id="why-sample-size-matters-in-prediction" class="level1">
-<h1>Why sample size matters in prediction</h1>
-<ul>
-<li><p>Many prediction models are developed using too little data. When this happens, the model can become too focused on the specific details of the sample it was trained on, rather than learning general patterns that apply more widely. This is known as overfitting. It means the model might appear accurate during development but make unreliable or unfair predictions in real-world settings.</p></li>
-<li><p>Small samples are especially problematic when making predictions for minoritised groups, as limited representation can lead to inaccurate and unfair predictions, potentially resulting in incorrect or even harmful treatment recommendations.</p></li>
-</ul>
-<div class="{=html}">
-<style>
-  #sample-controls {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 1.5rem;
-    font-family: Lato, sans-serif;
-  }
-  #sample-controls label {
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-  }
-  #sampleSize {
-    width: 80%;
-    max-width: 500px;
-  }
-</style>
-<div id="sample-controls">
-<p><label for="sampleSize"> Sample size: <span id="sampleSizeValue">100</span> </label> <input type="range" id="sampleSize" min="100" max="5000" step="100" value="100"></p>
+<div class="blog-post-byline">
+<img src="../images/ewan.png" alt="Photo of Ewan Carr
+" class="blog-author-avatar">
+<div class="blog-author-text">
+<p><span class="blog-author-name">Ewan Carr</span> <span class="blog-author-sep">·</span> 1 September 2026</p>
 </div>
-<canvas id="predictionChart" width="700" height="250">
-</canvas>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@1.4.0"></script>
-<script>
-  const ctx = document.getElementById('predictionChart').getContext('2d');
-  const sampleSizeSlider = document.getElementById('sampleSize');
-  const sampleSizeValue = document.getElementById('sampleSizeValue');
-  const trueProbability = 0.6;
-
-  function simulatePredictions(n, mean = trueProbability) {
-    const std = 0.3 * Math.exp(-n / 1000);
-    return Array.from({ length: 50 }, () => {
-      let val = mean + randn_bm() * std;
-      return Math.min(1, Math.max(0, val));
-    });
-  }
-
-  function randn_bm() {
-    let u = 0, v = 0;
-    while (u === 0) u = Math.random();
-    while (v === 0) v = Math.random();
-    return Math.sqrt(-2.0 * Math.log(u)) * Math.cos(2.0 * Math.PI * v);
-  }
-
-  function stabilityComment(n) {
-    if (n <= 500) {
-      return "Low sample size produces highly unstable predictions — unreliable for individual prediction.";
-    } else if (n <= 2000) {
-      return "Moderate sample size — predictions are more stable but still variable.";
-    } else {
-      return "High sample size — predictions are stable and consistent.";
-    }
-  }
-
-  const chart = new Chart(ctx, {
-    type: 'scatter',
-    data: {
-      datasets: [{
-        data: [],
-        pointRadius: 4,
-        backgroundColor: 'rgba(0, 123, 255, 0.7)',
-      }]
-    },
-    options: {
-      animation: false,
-      plugins: {
-        tooltip: { enabled: false },
-        legend: { display: false },
-        annotation: {
-          annotations: {
-            trueLine: {
-              type: 'line',
-              xMin: trueProbability,
-              xMax: trueProbability,
-              borderColor: 'rgba(200, 0, 0, 0.8)',
-              borderWidth: 2
-            },
-            trueLabel: {
-              type: 'label',
-              xValue: trueProbability,
-              yValue: 0.35,  // moved lower to avoid overlap
-              backgroundColor: 'rgba(200, 0, 0, 0.8)',
-              content: '0.6',
-              color: 'white',
-              font: {
-                size: 12,
-                family: 'Lato'
-              },
-              textAlign: 'center',
-              enabled: true
-            },
-            comment: {
-              type: 'label',
-              xValue: 0.5,
-              yValue: 0.95,
-              backgroundColor: 'rgba(255, 255, 255, 0.9)',
-              borderColor: 'rgba(0, 0, 0, 0.1)',
-              borderWidth: 1,
-              padding: 10,
-              cornerRadius: 6,
-              font: {
-                size: 14,
-                family: 'Lato',
-                weight: 'normal'
-              },
-              content: stabilityComment(100),
-              position: 'center',
-              textAlign: 'center',
-              display: true
-            }
-          }
-        }
-      },
-      scales: {
-        x: {
-          min: 0,
-          max: 1,
-          title: {
-            display: true,
-            text: 'Predicted Probability',
-            font: {
-              size: 14,
-              family: 'Lato'
-            }
-          },
-          ticks: {
-            font: {
-              size: 13,
-              family: 'Lato'
-            }
-          }
-        },
-        y: {
-          min: 0,
-          max: 1,
-          display: false
-        }
-      }
-    },
-    plugins: [Chart.registry.getPlugin('annotation')]
-  });
-
-  function updateChart(n) {
-    const data = simulatePredictions(n).map(x => ({
-      x: x,
-      y: 0.5 + (Math.random() - 0.5) * 0.05
-    }));
-    chart.data.datasets[0].data = data;
-    chart.options.plugins.annotation.annotations.comment.content = stabilityComment(n);
-    chart.update();
-  }
-
-  updateChart(100);
-
-  sampleSizeSlider.addEventListener('input', () => {
-    const n = parseInt(sampleSizeSlider.value);
-    sampleSizeValue.textContent = n;
-    updateChart(n);
-  });
-</script>
+</div>
+<p>We have recently released two papers from the project. One introduces the problem of sample size for prediction modelling and describes the approach we’ve taken in the <em>pmsims</em> package. The other describes how well the package works.</p>
+<p>Before building a prediction model, researchers have to decide how many people’s data they need. With too little data, a model can look convincing on the data used to build it and then perform poorly for new patients. The problem is often invisible until the tool is already being used.</p>
+<p>A common way of answering this question is a formula. Formulas are quick, and for standard regression models they work well. But they rest on assumptions that often don’t hold in real clinical data: that the model has been specified correctly, and that the predictors behave neatly. They also don’t extend to the machine learning methods researchers increasingly use.</p>
+<section id="paper-1-what-counts-as-enough-data" class="level1">
+<h1>Paper 1: what counts as enough data</h1>
+<p>The first paper, led by <a href="https://www.kcl.ac.uk/people/diana-shamsutdinova">Diana Shamsutdinova</a>, reviews the existing methods and draws a distinction between two ways of asking the sample size question.</p>
+<p>The first way asks how much data is needed for the model to perform well <em>on average</em>. The second asks how much data is needed for it to perform well <em>most of the time</em> (for example, in eight cases out of ten). The second target is harder and usually requires more data.</p>
+<p><em>pmsims</em> can answer either. Rather than relying on a formula, it simulates both the data and the fitting of the model: it generates a population, draws a dataset of a given size from it, fits the model, measures how well the model does, and repeats. Doing that exhaustively for every possible sample size would take a very long time, so <em>pmsims</em> uses a Gaussian process — a statistical method for estimating the shape of a curve from a small number of points — to decide which sample sizes are worth trying next.</p>
+<div class="blog-citation">
+<p>Shamsutdinova D, Zimmer F, Olaniran OR, Markham S, Stahl D, Forbes G, Carr E. <a href="https://arxiv.org/abs/2602.23507">Sample size calculations for developing clinical prediction models: overview and pmsims R package</a>. Preprint. Free to read.</p>
 </div>
 </section>
-<section id="how-will-this-project-help" class="level1">
-<h1>How will this project help?</h1>
-<ul>
-<li><p>An essential first step in building a model is estimating how much data is needed.</p></li>
-<li><p>We’re creating a simple, user-friendly tool that estimates the minimum amount of data needed for different types of prediction models. It does this by generating synthetic (artificial) data of different sizes and testing how well models perform with each one.</p></li>
-<li><p>This will help researchers decide how complex their model should be—and help prevent models being developed without enough data, which can lead to inaccurate or unfair predictions and wasted research effort.</p></li>
-</ul>
+<section id="paper-2-testing-the-package" class="level1">
+<h1>Paper 2: testing the package</h1>
+<p>The second paper, led by <a href="https://www.kcl.ac.uk/people/ridwan-oyebayo-olaniran">Ridwan Olaniran</a> and published in <em>BMC Medical Research Methodology</em>, evaluates how well the sample size engine in <em>pmsims</em> works. The study considered binary yes/no outcomes, continuous outcomes such as blood pressure, and time-to-event outcomes such as time until relapse.</p>
+<p>We checked two things. First, whether the Gaussian process search is stable: if you run it repeatedly on the same problem, does it give you a similar answer each time? It was the most stable of the three search strategies we’ve implemented, and its lead grew as the problem got harder — a weak signal spread across many predictors.</p>
+<p>Second, whether the sample sizes it recommends are the right ones. We took the recommendation, built models at that size, and checked them on fresh data. The models performed close to the targets, across all three outcome types.</p>
+<p>We also compared <em>pmsims</em> against two existing tools, <em>pmsampsize</em> and <em>samplesizedev</em>. In the more straightforward settings all three broadly agreed. They parted company when the model being planned was expected to predict well — that is, to separate patients who go on to have the outcome from those who don’t. <em>pmsampsize</em> uses an analytic formula rather than simulation, and in that setting the formula recommended smaller samples than the simulations did; models built at those sizes fell short of the target.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/olaniran-2026-fig-s8.png" class="img-fluid figure-img" alt="Four panels plotting estimated calibration slope against number of predictors, for outcome prevalence 0.05 and 0.2 and AUC 0.8 and 0.9. A dashed line marks the target calibration slope of 0.900. The pmsims-mean and samplesizedev lines sit on the target in all four panels; pmsims-assurance sits just below it; the pmsampsize line sits clearly below the target, and lowest in the AUC 0.9 panels."></p>
+<figcaption>Figure S8 from the paper. The dashed line is the target the models were built to hit. Each panel is a different situation: how common the outcome is (prevalence) and how strongly the model predicts (AUC). Along the bottom is the number of predictors in the model. The two simulation-based tools, <em>pmsims</em> and <em>samplesizedev</em>, sit on the target line. <em>pmsampsize</em> sits below it, and further below when the model predicts strongly. Reproduced from Olaniran et al.&nbsp;(2026) under <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>.</figcaption>
+</figure>
+</div>
+<div class="blog-citation">
+<p>Olaniran OR, Shamsutdinova D, Markham S, Zimmer F, Stahl D, Forbes G, Carr E. <a href="https://doi.org/10.1186/s12874-026-02935-9">Adaptive Gaussian process search for simulation-based sample size estimation in clinical prediction models: validation of the pmsims R package</a>. <em>BMC Medical Research Methodology</em>, 13 July 2026. Free to read.</p>
+</div>
+</section>
+<section id="the-package" class="level1">
+<h1>The package</h1>
+<p>The package itself is at <a href="https://pmsims-package.github.io/pmsims/">pmsims-package.github.io/pmsims</a>, and it’s free to use. If you try it, we’d like to hear how you get on — particularly if something doesn’t work as you expect.</p>
 
 
 </section>

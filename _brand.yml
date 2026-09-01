@@ -2,7 +2,11 @@ color:
   palette:
     blue: "#073e66"
     orange: "#f65f33"
-  foreground: blue
+    ink: "#22303c"
+  # Body text is `ink`, not `blue`. With foreground set to blue, every
+  # paragraph on the site rendered in #073e66, which is why pages read as a
+  # wall of blue. Blue stays as `primary`, for links and headings.
+  foreground: ink
   primary: blue
   secondary: orange
 

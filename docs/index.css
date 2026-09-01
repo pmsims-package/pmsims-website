@@ -1,18 +1,23 @@
-/* index2.css */
+/* Hero. Colours and radii come from the site tokens in styles.css — this file
+   previously defined its own palette, including a --hero-accent (#0d5b9c) that
+   appeared nowhere else in the brand. */
 :root {
-  --hero-bg: #f3f8fc;
-  --hero-ink: #0b2f4f;
-  --hero-ink-soft: #2b4b66;
-  --hero-accent: #0d5b9c;
+  --hero-bg: var(--surface-tint, #f6f9fc);
+  --hero-ink: #0c1b28;
+  --hero-ink-soft: #53646f;
+  --hero-accent: #073e66;
 }
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  /* The graphic carries labelled type, so it gets slightly the larger share —
+     at 1.1fr / 1fr it was rendering too small to read comfortably. */
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
   gap: clamp(1rem, 3vw, 2rem);
   align-items: stretch;
   background: var(--hero-bg);
-  border-radius: 1.25rem;
+  border: 1px solid var(--surface-line, #e2e9ef);
+  border-radius: var(--surface-radius, 0.4rem);
   padding: clamp(1.25rem, 3vw, 2.5rem);
   margin-bottom: 2rem;
   font-family: Lato, sans-serif;
@@ -26,17 +31,15 @@
   color: var(--hero-ink);
 }
 
-.hero-tag {
-  font-size: 0.95rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--hero-accent);
-  margin: 0;
-}
-
-.hero h1 {
+/* Two classes, deliberately: styles.css sets `main.content h1` (0,1,2) for the
+   site's blue headings, which outranks a plain `.hero h1` (0,1,1). Without the
+   extra class the hero title is painted #073e66 — invisible against the dark
+   hero background used below 700px. */
+.hero .hero-text h1 {
   font-size: clamp(2.2rem, 4.5vw, 3.6rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--hero-ink);
   margin: 0;
 }
 
@@ -49,17 +52,26 @@
 }
 
 .hero-media {
-  border-radius: 1rem;
+  border-radius: var(--surface-radius, 0.4rem);
   overflow: hidden;
   min-height: clamp(220px, 32vw, 360px);
 }
 
-.hero-img {
-  width: 100%;
-  height: 100%;
+/* The hero graphic is an inline SVG, not a photograph: it must scale whole
+   rather than be cropped to fill, and it inherits Lato from the page (an
+   <img>-loaded SVG cannot reach the webfont). */
+.hero-media--diagram {
+  display: flex;
+  align-items: center;
+  min-height: 0;
+  overflow: visible;
+}
+
+.hero-media--diagram svg {
   display: block;
-  object-fit: cover;
-  object-position: center 35%;
+  width: 100%;
+  height: auto;
+  font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 @media (max-width: 700px) {
@@ -69,14 +81,14 @@
   }
 
   .hero-text {
-    background: #0b3557;
+    background: #073e66;
     color: #ffffff;
     padding: 1rem;
-    border-radius: 0.9rem;
+    border-radius: var(--surface-radius, 0.4rem);
   }
 
-  .hero-tag {
-    color: #d7ecff;
+  .hero .hero-text h1 {
+    color: #ffffff;
   }
 
   .hero-subtitle {
@@ -87,21 +99,83 @@
   .hero-media {
     min-height: 200px;
   }
-
-  .hero-img {
-    object-position: center 45%;
-  }
 }
 
-.banner-container {
-  position: relative;
-  font-family: Lato, sans-serif;
-  margin-bottom: 1.5rem;
+/* The #about and #contact anchors are jump targets from the navbar, and the
+   navbar is pinned, so they need clearance or the target lands underneath it.
+   This used to live on the decorative banner that carried the #about id. */
+#about,
+#contact {
+  scroll-margin-top: 4.5rem;
 }
 
-.banner-img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 0.75rem;
+/* ---------------------------------------------------------------------------
+   Full-bleed navy band.
+
+   It is ONE element: a fenced div in index.qmd wraps the three sections, so
+   there is a single background box. An earlier version bled each section
+   separately and tried to close the gaps with margin rules; that could not
+   work reliably, because a seam appears wherever any margin lands between two
+   independently-painted boxes. With one box there is nothing to seam.
+
+   The bleed: negative inline margins push the box out to the viewport edges;
+   equal inline padding pulls the text back to the original column, so the copy
+   stays aligned with everything above and below. `overflow-x: clip` on the
+   body absorbs the scrollbar's share of 100vw — `clip`, not `hidden`, because
+   `hidden` creates a scroll container and breaks the pinned navbar.
+
+   Vertical spacing is `padding-block` on the band alone. The first heading's
+   and last list's own margins are zeroed so the padding is the only thing
+   setting the inset — otherwise margin and padding stack and the navy appears
+   to start late.
+   --------------------------------------------------------------------------- */
+body.home-page {
+  overflow-x: clip;
+}
+
+/* The page carries a title only to stop Quarto promoting the first heading
+   (see index.qmd). The hero is the page's real masthead, so the title block
+   itself is hidden — it still populates the browser tab and link previews. */
+body.home-page #title-block-header {
+  display: none;
+}
+
+body.home-page main.content .band-navy {
+  margin-inline: calc(50% - 50vw);
+  padding-inline: calc(50vw - 50%);
+  margin-block: clamp(2.25rem, 4vw, 3.25rem);
+  padding-block: clamp(2.25rem, 4.5vw, 3rem);
+  background: #073e66;
+  color: #ffffff;
+}
+
+/* Padding alone sets the inset at the band's two ends. */
+body.home-page main.content .band-navy > section:first-child > :first-child {
+  margin-top: 0;
+}
+
+body.home-page main.content .band-navy > section:last-child > :last-child {
+  margin-bottom: 0;
+}
+
+/* styles.css sets `main.content h1 { color: #073e66 }` at (0,1,2) for the
+   site's blue headings. On navy that is invisible, so this must outrank it;
+   the extra class gives (0,2,2). */
+body.home-page main.content .band-navy h1 {
+  color: #ffffff;
+}
+
+body.home-page main.content .band-navy li {
+  color: #eef4f9;
+}
+
+/* .hl keeps a yellow ground but must not inherit the white text. */
+body.home-page main.content .band-navy .hl {
+  background-color: #ffe9a8;
+  color: #1d2b36;
+}
+
+body.home-page main.content .band-navy a {
+  color: #cfe4f5;
+  text-decoration-color: rgba(207, 228, 245, 0.55);
 }

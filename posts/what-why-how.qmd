@@ -4,6 +4,7 @@ author: Sarah Markham
 author_image: /images/sarah.png
 image: ../images/shanty.png
 date: 2026-02-05
+date_display: "5 February 2026"
 description: "In this post, our PPI lead, Sarah, introduces the concept of sample size and how pmsims helps us choose a data size that performs reliably in practice."
 ---
 
@@ -13,7 +14,7 @@ description: "In this post, our PPI lead, Sarah, introduces the concept of sampl
 ```
 
 ::: {.blog-author-text}
-Written by {{< meta author >}}
+[{{< meta author >}}]{.blog-author-name} [·]{.blog-author-sep} {{< meta date_display >}}
 :::
 :::
 

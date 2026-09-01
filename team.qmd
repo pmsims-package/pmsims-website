@@ -1,5 +1,6 @@
 ---
 title: "Our Team"
+toc: false
 format:
   html:
     body-classes: team-page
@@ -165,6 +166,10 @@ page-layout: full
 ```
 
 ## Funding
+
+This work is supported by the National Institute for Health and Care Research
+(NIHR) under the Research for Patient Benefit (RfPB) Programme
+([NIHR206858](https://www.fundingawards.nihr.ac.uk/award/NIHR206858)).
 
 ```{=html}
 <div class="d-flex flex-wrap justify-content-center align-items-center gap-4 my-4">

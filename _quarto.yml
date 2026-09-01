@@ -1,6 +1,13 @@
 project:
   type: website
   output-dir: docs
+  # Copied into docs/ on every render. Neither file is generated from a source
+  # document, so without this a clean rebuild silently drops them: CNAME is what
+  # points pmsims.com at GitHub Pages, and .nojekyll stops Pages running the
+  # output through Jekyll. Keep the originals in the project root.
+  resources:
+    - CNAME
+    - .nojekyll
 
 website:
   title: "pmsims"

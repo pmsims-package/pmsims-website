@@ -209,15 +209,15 @@ body.team-page #advisory-group .card .d-flex h4 {
   }
 }
 
-/* Left-aligned to sit under the body copy, rather than centred against it. */
+/* Centred, matching the funder logo on the Team page's Funding section. */
 .logo-strip {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   gap: 1rem;
   padding: 1rem 0;
-  text-align: left;
+  text-align: center;
 }
 
 .logo-item {
